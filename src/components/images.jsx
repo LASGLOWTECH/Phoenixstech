@@ -9,9 +9,9 @@ import Woman1 from '../assets/images/woman1.jpg';
 import Woman2 from '../assets/images/woman2.jpg';
 import Homehero from '../assets/images/Homehero.png'
 import Whoweare from '../assets/images/Whoweare.png'
-import Splines from '../assets/images/splines.png'
+import plines from '../assets/images/splines.png'
 import Line from '../assets/images/Line.png'
-import Line2 from '../assets/images/Line2.png'
+
 import Partnerimg from '../assets/images/Partnerimg.png'
 import  Frame1 from '../assets/images/Frame1.png'
 import  Frame2  from '../assets/images/Frame2.png'
@@ -51,7 +51,7 @@ export {
   logo,
   Homehero,
   Lady1,
-  Splines,
+  plines,
   Whoweare,
   Line,
   Careersimg,
