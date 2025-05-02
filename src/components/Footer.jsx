@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { plines } from "../components/images";
+import { Plines } from "../components/images";
 
 export default function Footer() {
   const textStyle = "text-[14px]  hover:text-Secondarycolor1 text-gray-300"
@@ -74,7 +74,7 @@ export default function Footer() {
 
       {/* Gradient Blob Image */}
       <img
-        src={plines}
+        src={Plines}
         alt="Colorful Gradient Decoration"
         className="absolute right-0 top-0 w-96 md:flex hidden sm:w-[500px] opacity-90 pointer-events-none z-0"
       />
