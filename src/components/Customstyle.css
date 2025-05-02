@@ -1,0 +1,16 @@
+/* Image styling with slight tilt */
+
+.skew-container {
+    perspective: 1000px;
+  }
+  
+  .skew-image {
+    transform: rotateY(-6deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .skew-image:hover {
+    transform: rotateY(0deg) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
