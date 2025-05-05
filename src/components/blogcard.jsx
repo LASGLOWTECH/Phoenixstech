@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import blogdata from "../assets/data/blogdata";
+import React, { useState,useEffect } from "react";
+// 
+import instance from "../config/axios.config";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { PiArrowCircleUpRightFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
@@ -7,18 +8,44 @@ import { Link } from "react-router-dom";
 const Blogcard = () => {
     const blogsPerPage = 3;
     const [currentPage, setCurrentPage] = useState(1);
+    
 
-    const totalPages = Math.ceil(blogdata.length / blogsPerPage);
+  const [posts, setPosts] = useState([]);
+  const fetchDta = async () => {
+    try {
+      console.log("Fetching data from backend...");
+      const res = await instance.get("/posts");
+      
+      console.log("Response received:", res.data);  // Log response data
+      setPosts(res.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);  // Log the error
+    }
+  };
+
+
+  useEffect(() => {
+    console.log("useEffect triggered");
+    fetchDta()
+
+
+
+
+
+  }, [])
+
+
+    const totalPages = Math.ceil(posts.length / blogsPerPage);
 
     // Get the blogs for the current page
-    const currentBlogs = blogdata.slice(
+    const currentBlogs =posts.slice(
         (currentPage - 1) * blogsPerPage,
         currentPage * blogsPerPage
     );
 
     // State to store the share count for each blog post
     const [shares, setShares] = useState(
-        blogdata.reduce((acc, blog) => {
+        posts.reduce((acc, blog) => {
             acc[blog.blogid] = blog.shares || 0;
             return acc;
         }, {})
@@ -71,7 +98,7 @@ const Blogcard = () => {
                         <Link to={`/blog/${blog.id}`} key={blog.id} className="block">
 
                             <img
-                                src={blog.image}
+                               src={`../upload/${blog.cover}`}
                                 alt="blog"
                                 className="w-full h-56 md:h-64 lg:h-60 xl:h-64 object-cover rounded-md"
                             />
@@ -80,6 +107,7 @@ const Blogcard = () => {
                             </h4>
                         </Link>
                         <div className="flex justify-left items-center">
+                            
                             <p className="text-grey-100 pe-6 text-[14px]">
                                 {blog.date}
                             </p>
@@ -91,8 +119,13 @@ const Blogcard = () => {
                             </div>
                             <span className="text-[14px]">{shares[blog.blogid]}</span>
                         </div>
-                        <p className="text-grey-100 text-base my-4 line-clamp-3">{blog.description}</p>
-                        <Link to={`/blog/${blog.blogid}`}>
+
+                        
+                        <p className="text-grey-100 text-base my-4 line-clamp-3"  dangerouslySetInnerHTML={{ __html: blog.content }}  ></p>
+
+
+                        <Link to={`/blog/${blog.id}`}>
+                      
                             <div className="flex items-center pt-6 group cursor-pointer transition-all duration-500">
                                 <p className="ml-2 text-Primarycolor2 font-medium transition-all duration-500">
                                     Read Article

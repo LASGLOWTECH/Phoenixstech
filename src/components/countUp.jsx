@@ -56,12 +56,12 @@ export default function MultilingualSupportSection() {
           transition={{ duration: 0.8 }}
         >
                 <div ref={ref}>
-                <div className="flex items-center m:mb-2 md:justify-left   md:items-left flex-row ">
+                <div className="flex items-center  justify-center m:mb-2 md:justify-left   md:items-left flex-row ">
           <div className="rounded-full bg-gradient-to-r from-Secondarycolor to-Secondarycolor1  w-[10px] h-[10px]  mr-2"></div>
           <p className="text-sm text-orange-500 py-6 ">Who are We</p>
         </div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
-                        Your <span className="text-orange-400">Trusted Partner</span> for <br />
+                    <h2 className=" text-center md:text-left text-3xl md:max-w-lg md:text-4xl font-bold mb-4 leading-snug">
+                        Your <span className="text-orange-400">Trusted Partner</span> for 
                         Multilingual Business Support
                     </h2>
                     <p className="text-gray-600 text-base mb-6 max-w-xl">

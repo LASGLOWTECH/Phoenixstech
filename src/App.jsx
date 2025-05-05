@@ -2,6 +2,9 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TawkToWidget from './utils/tawkit';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Home } from "./pages/Home";
@@ -78,6 +81,7 @@ function App() {
         </div>
         <ScrollTop />
         <TawkToWidget />
+        <ToastContainer />
         <Footer />
 
 

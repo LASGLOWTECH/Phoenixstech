@@ -19,7 +19,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="text-center md:text-left"
         >
-          <h1 className="text-2xl sm:text-4xl md:text-5xl mx-auto font-bold text-grey-100 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl mx-auto font-bold text-grey-100 leading-tight">
             {t("Driving Business")} <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1 ">Excellence</span><br />
             Through Multilingual Business Support
           </h1>

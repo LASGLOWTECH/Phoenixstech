@@ -1,25 +1,62 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import blogdata from "../assets/data/blogdata";
+import instance from "../config/axios.config";
+import RelatedPosts from "../components/sections/relatedposts";
 import Subscription from "../components/subscription";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { IoShareSocialSharp } from "react-icons/io5";
+import moment from "moment/moment";
 import { PiArrowCircleUpRightFill } from "react-icons/pi";
-const BlogDetails = () => {
-  const { id } = useParams();
-  const post = blogdata.find((item) => item.id.toString() === id); // Convert to string for safety
 
+const BlogDetails = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [post, setPost] = useState(null); // single blog post
   const [shares, setShares] = useState({});
 
-  useEffect(() => {
-    // Initialize share count for current blog post if not already set
-    setShares((prevShares) => ({
-      ...prevShares,
-      [id]: prevShares[id] || 0,
-    }));
-  }, [id]);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const postId = location.pathname.split("/")[2];
 
-  const handleShare = (blogid) => {
+  // Fetch blog post
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await instance.get(`/posts/${postId}`);
+        setPost(res.data);
+      } catch (error) {
+        setError("Failed to fetch the post.");
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [postId]);
+
+  // Track shares
+  useEffect(() => {
+    if (post && post.id) {
+      setShares((prev) => ({
+        ...prev,
+        [post.id]: prev[post.id] || 0,
+      }));
+    }
+  }, [post]);
+
+  // Handle post deletion
+  const handleDelete = async () => {
+    try {
+      await instance.delete(`/posts/${postId}`);
+      navigate("/blog");
+    } catch (error) {
+      setError("Can't delete post");
+      console.error("Delete error:", error);
+    }
+  };
+
+  // Handle share action
+  const handleShare = (blogId) => {
     if (navigator.share) {
       navigator
         .share({
@@ -28,12 +65,10 @@ const BlogDetails = () => {
           url: window.location.href,
         })
         .then(() => {
-          // Increment the share count for the blog
-          setShares((prevShares) => ({
-            ...prevShares,
-            [blogid]: (prevShares[blogid] || 0) + 1,
+          setShares((prev) => ({
+            ...prev,
+            [blogId]: (prev[blogId] || 0) + 1,
           }));
-          console.log("Shared successfully");
         })
         .catch((error) => console.error("Error sharing:", error));
     } else {
@@ -41,36 +76,41 @@ const BlogDetails = () => {
     }
   };
 
-  if (!post) {
-    return <div className="text-black text-center mt-10">Blog not found</div>;
-  }
+  // Loading state
+  if (loading) return <div className="text-black">Loading...</div>;
+
+  // Error state
+  if (error) return <div className="text-black">{error}</div>;
+
+  // Post not found
+  if (!post) return <div className="text-black text-center mt-10">Blog not found</div>;
 
   return (
     <div className="bg-gray-100 py-16">
       <div className="md:px-20 px-6 mx-auto rounded-lg overflow-hidden">
+        {/* Back Button */}
         <div className="p-3 border-b border-gray-200">
-          <button className="flex items-center text-gray-600 hover:text-gray-800">
+          <Link to="/blog" className="flex items-center text-gray-600 hover:text-gray-800 text-lg font-semibold">
             <FaArrowLeftLong className="mr-2" size={20} />
-            <Link to="/blog" className="text-lg font-semibold">Back</Link>
-          </button>
+            Back
+          </Link>
         </div>
 
+        {/* Cover Image */}
         <div className="relative">
-          <img className="w-full md:h-[573px] object-cover" src={post.image} alt="blog" />
+          <img className="w-full md:h-fit object-cover" src={`../upload/${post.cover}`}
+            alt="blog" />
         </div>
 
-
-        <h2 className="md:text-3xl text-Darkash py-5 mb-5 text-3xl  sm:text-3xl font-semibold">
+        {/* Blog Title */}
+        <h2 className="md:text-3xl text-Darkash py-5 mb-5 text-3xl font-semibold">
           {post.title}
         </h2>
-        <div className="flex justify-between flex-col items-center max-w-[800px]  pt-4 mx-5 md:mx-auto">
 
-
-        </div>
-
+        {/* Blog Meta */}
         <div className="flex justify-left items-center gap-2 mb-6">
-          <p className="text-grey-100 pe-6 text-[14px]">
-            {post.date}
+          <p className="text-gray-500 pe-6 text-[14px]">
+          Posted {moment(post.timestamp).fromNow()}
           </p>
           <div
             onClick={() => handleShare(post.id)}
@@ -82,50 +122,28 @@ const BlogDetails = () => {
           <span className="text-[14px] text-gray-700">{shares[post.id]} shares</span>
         </div>
 
-        <button className="bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold py-2 px-5 rounded-md transition-all duration-300 mt-3 flex items-center" onClick={() => handleShare(post.id)}>
-          Share <IoShareSocialSharp fill="white" className=" text-lg" />
+        {/* Share Button */}
+        <button
+          className="bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold py-2 px-5 rounded-md transition-all duration-300 mt-3 flex items-center gap-2"
+          onClick={() => handleShare(post.id)}
+        >
+          Share <IoShareSocialSharp fill="white" className="text-lg" />
         </button>
-        <p className="text-grey-100 text-base md:text-lg my-4 ">{post.description}</p>
+
+        {/* Blog Content */}
+      
+        <p className="text-gray-700 text-base md:text-lg my-4"   dangerouslySetInnerHTML={{ __html: post.content }}></p>
 
 
-        <Subscription />
+        <RelatedPosts currentPostId={postId} />
 
-        <div className="container mx-auto px-4 py-8"> 
-          <h3 className="text-4xl font-semibold text-gray-800 mt-8 mb-4">Suggestions For You</h3>
-          <div className="text-gray-700 text-base mb-8" dangerouslySetInnerHTML={{ __html: post.content }}></div>
-
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {blogdata
-              .filter((item) => item.id !== post.id)
-              .slice(0, 3) // Limit to 3 suggestions
-              .sort(() => Math.random() - 0.5) // Randomize order
-           
-              .map((item) => (
-                <div key={item.id} className="bg-white p-4 rounded-lg shadow-md">
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover rounded-md" />
-                  <h3 className="text-lg font-semibold mt-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+        {/* Subscription Section */}
+       
 
 
-                  <Link to={`/blog/${item.id}`}>
-                    <div className="flex items-center pt-6 group cursor-pointer transition-all duration-500">
-                      <p className="ml-2 text-Primarycolor2 font-medium transition-all duration-500">
-                        Read Article
-                      </p>
-                      <span className="transition-transform duration-500 ease-in-out">
-                        <PiArrowCircleUpRightFill className="w-8 h-8 fill-Primarycolor" />
-                      </span>
-                    </div>
-                  </Link>
-
-                </div>
-              ))}
-
-
-          </div>
-        </div>
       </div>
+      <Subscription />
+
     </div>
   );
 };

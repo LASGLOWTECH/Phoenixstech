@@ -1,12 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import instance from '../config/axios.config'
 import { Image7 } from './images'
+import { useNavigate } from 'react-router-dom'
+
+
 const Subscription = () => {
 
 
-
+    const navigate=useNavigate()
 
 
     const [formData, setFormData] = useState({
@@ -27,10 +30,14 @@ const Subscription = () => {
         setLoading(true);
         setStatus('');
 
+
+       
         try {
-            const res = await axios.post('/api/contact', formData);
+            const res = await instance.post(`/subscribe`, formData);
             setStatus('Message sent successfully!');
             setFormData({  email: ''});
+
+            navigate("/");
         } catch (err) {
             setStatus('Something went wrong. Please try again later.');
         } finally {
@@ -74,21 +81,26 @@ const Subscription = () => {
                         className=" w-[300px] md:w-[400px] p-3  bg-[#F6F5FA] focus:outline-none focus:ring-2  rounded-md"
                         required
                     />
+
+
+
+
+<div className="mt-8">
+
+                   
+<button  type="submit"
+    className="bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold py-3 px-5 rounded-md transition-all duration-300"
+
+    disabled={loading}
+    >
+     {loading ? 'Sending...' : '  Subscribe Now'} 
+</button>
+
+</div>
                 </form>
 
 
-                <div className="mt-8">
-
-                   
-                        <button  type="submit"
-                            className="bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold py-3 px-5 rounded-md transition-all duration-300"
-                       
-                            disabled={loading}
-                            >
-                             {loading ? 'Sending...' : '  Subscribe Now'} 
-                        </button>
-                 
-                </div>
+                
             </div>
         </div>
     )

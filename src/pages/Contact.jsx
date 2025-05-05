@@ -2,8 +2,8 @@ import useAOS from '../hooks/useAos';
 import { Image3 } from '../components/images';
 import FaqSection from '../components/Faq';
 import React, { useState } from 'react';
-
-import axios from 'axios';
+import { toast } from 'react-toastify';
+import instance from '../config/axios.config';
 import {
   FaEnvelope, FaPhoneAlt, FaMapMarkerAlt,
   FaLinkedin, FaInstagram, FaFacebookF, FaTwitter
@@ -24,7 +24,7 @@ const ContactSection = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState('');
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,16 +33,19 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus('');
+   
 
     try {
-      const res = await axios.post('/api/contact', formData);
-      setStatus('Message sent successfully!');
+      const res = await instance.post('/contacts', formData);
+      toast.success('Message sent successfully!');
+      
       setFormData({ firstName: '', lastName: '', email: '', subject: '', message: '' });
-    } catch (err) {
-      setStatus('Something went wrong. Please try again later.');
-    } finally {
-      setLoading(false);
+    } catch (error) {
+      if (error.response?.status === 400) {
+        toast.error(error.response.data.error);
+      } else {
+        toast.error('Something went wrong. Please try again.');
+      }
     }
   };
 
@@ -89,7 +92,7 @@ const ContactSection = () => {
 
                 <div>
                   <p className="font-bold">Email</p>
-                  <p className="text-Primarycolor">info@pheonixtech.com</p>
+                  <p className="text-Primarycolor">info@pheonixstech.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -100,7 +103,7 @@ const ContactSection = () => {
 
                 <div>
                   <p className="font-bold">Phone Number</p>
-                  <p className="text-Primarycolor">info@pheonixtech.com</p>
+                  <p className="text-Primarycolor">info@pheonixstech.com</p>
                 </div>
               </div>
 
