@@ -5,7 +5,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import instance from '../config/axios.config';
 import { useLocation, useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
 const Create = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const Create = () => {
     try {
       const formData = new FormData();
       formData.append('file', file);
-      const res = await instance.post("/upload", formData);
+      const res = await instance.post("/upload/images", formData);
       return res.data; // This should return the image URL
     } catch (error) {
       console.error("Upload Error:", error);
@@ -55,10 +55,16 @@ const Create = () => {
           cover,
         });
       }
+        toast.success('Blog created  successfully!');
+            
       navigate("/blog"); // Redirect after success
     } catch (error) {
-      console.error("Submit Error:", error);
-    }
+          if (error.response?.status === 400) {
+            toast.error(error.response.data.error);
+          } else {
+            toast.error('Unable to create blog. Please try again.');
+          }
+        }
   };
 
   return (

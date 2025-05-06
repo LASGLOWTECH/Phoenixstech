@@ -97,10 +97,15 @@ const BlogDetails = () => {
         </div>
 
         {/* Cover Image */}
+        {/* Cover Image */}
         <div className="relative">
-          <img className="w-full md:h-fit object-cover" src={`../upload/${post.cover}`}
-            alt="blog" />
+          <img
+            className="w-full max-h-[500px] object-cover rounded-md"
+            src={`../upload/images/${post.cover}`}
+            alt="blog"
+          />
         </div>
+
 
         {/* Blog Title */}
         <h2 className="md:text-3xl text-Darkash py-5 mb-5 text-3xl font-semibold">
@@ -110,7 +115,7 @@ const BlogDetails = () => {
         {/* Blog Meta */}
         <div className="flex justify-left items-center gap-2 mb-6">
           <p className="text-gray-500 pe-6 text-[14px]">
-          Posted {moment(post.timestamp).fromNow()}
+            Posted {moment(post.timestamp).fromNow()}
           </p>
           <div
             onClick={() => handleShare(post.id)}
@@ -131,14 +136,14 @@ const BlogDetails = () => {
         </button>
 
         {/* Blog Content */}
-      
-        <p className="text-gray-700 text-base md:text-lg my-4"   dangerouslySetInnerHTML={{ __html: post.content }}></p>
+
+        <p className="text-gray-700 text-base md:text-lg my-4" dangerouslySetInnerHTML={{ __html: post.content }}></p>
 
 
         <RelatedPosts currentPostId={postId} />
 
         {/* Subscription Section */}
-       
+
 
 
       </div>

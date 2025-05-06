@@ -34,7 +34,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import NotFound from './pages/not-found';
 import Create from './pages/createblog';
-
+import Consultation from './pages/consultaion';
 function App() {
 
 
@@ -56,8 +56,10 @@ function App() {
             {/* BLOGS */}
             <Route path="/blog" element={<Blogs />} />
             <Route path="/blog/:id" element={<BlogDetails />} />
-            <Route path='/createblog' element={<Create/>}/>
+            <Route path='/createblog' element={<Create />} />
 
+            {/* consultation */}
+            <Route path='consultation' element={<Consultation />} />
             {/* INDUSTRIES */}
 
             <Route path="/industries/e-commerce" element={<ECommerce />} />
@@ -65,8 +67,8 @@ function App() {
             <Route path="/industries/healthcare" element={<Healthcare />} />
             <Route path="/industries/insurance" element={<Insurance />} />
             <Route path="/industries/finance-and-banking" element={<Finance />} />
-          <Route path="/industries/technology" element={<Technology />} />
-          <Route path="/industries/media" element={<Media />} />
+            <Route path="/industries/technology" element={<Technology />} />
+            <Route path="/industries/media" element={<Media />} />
             {/* OUTSOURCING SERVICES */}
 
 

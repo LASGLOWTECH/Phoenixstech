@@ -98,7 +98,7 @@ const Blogcard = () => {
                         <Link to={`/blog/${blog.id}`} key={blog.id} className="block">
 
                             <img
-                               src={`../upload/${blog.cover}`}
+                               src={`../upload/images/${blog.cover}`}
                                 alt="blog"
                                 className="w-full h-56 md:h-64 lg:h-60 xl:h-64 object-cover rounded-md"
                             />

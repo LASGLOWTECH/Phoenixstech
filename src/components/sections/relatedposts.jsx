@@ -35,7 +35,7 @@ const RelatedPosts = ({ currentPostId }) => {
             key={post.id}
             className="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 overflow-hidden"
           >
-            <img src={`../upload/${post.cover}`} alt={post.title} className="w-full h-[400px]  object-cover" />
+            <img src={`../upload/images/${post.cover}`} alt={post.title} className="w-full h-[400px]  object-cover" />
             <div className="p-4">
               <h4 className="text-xl font-bold text-gray-800">{post.title}</h4>
               <p className="text-sm text-gray-500 mt-2">{post.timestamp}</p>

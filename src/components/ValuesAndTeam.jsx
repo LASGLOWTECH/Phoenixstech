@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image4} from "../components/images";
-import { Lady1 } from "../components/images";
+
 import { IoMdCheckbox } from "react-icons/io";
 import useAOS from '../hooks/useAos';
 const ValuesAndTeamSection = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import ServicesSection  from '../components/Servicesection';
-import { useEffect, useState } from "react";
+
 import Hero from '../components/sections/hero';
 import MultilingualSupportSection from '../components/countUp';
 import WhyUs from '../components/Whyus';
