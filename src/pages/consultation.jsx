@@ -68,7 +68,8 @@ const Consultation = () => {
         message: '',
       });
       setFile(null);
-      toast.success('Details Submited');
+      toast.success('Details Submitted');
+      
     } catch (err) {
       toast.error(
         err.response?.data?.error || 'Something went wrong. Please try again.'
@@ -114,7 +115,7 @@ const Consultation = () => {
           <input
             name="email"
             type="email"
-            placeholder="Ex JohnDoe214@gmail.com"
+            placeholder="Ex info@gmail.com"
             value={formData.email}
             onChange={handleChange}
             className="w-full p-3 bg-[#F6F5FA] focus:outline-none focus:ring-2 rounded-md"

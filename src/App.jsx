@@ -34,7 +34,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import NotFound from './pages/not-found';
 import Create from './pages/createblog';
-import Consultation from './pages/consultaion';
+import Consultation from './pages/consultation';
 function App() {
 
 
