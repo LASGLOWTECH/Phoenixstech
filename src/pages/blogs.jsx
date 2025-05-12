@@ -1,7 +1,7 @@
 import React from 'react'
 import Blogcard from '../components/blogcard';
 import instance from '../config/axios.config';
-import { Image7 } from "../components/images";
+
 
 import Subscription from '../components/subscription';
 // import { posts } from "../components/blogdata";

@@ -1,79 +1,104 @@
-import useAOS from '../hooks/useAos';
-import { MdCloudUpload } from "react-icons/md";
 import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import instance from '../config/axios.config';
-import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { MdCloudUpload } from "react-icons/md";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import instance from '../config/axios.config';
+import useAOS from '../hooks/useAos';
+
 const Consultation = () => {
-  const refreshAOS = useAOS();
-  const [previewUrl, setPreviewUrl] = useState(null);
+  useAOS();
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     message: '',
   });
-
   const [file, setFile] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Handle form input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const upload = async () => {
-    try {
-      const allowedTypes = ['application/pdf', 'image/jpeg'];
-      if (!allowedTypes.includes(file.type)) {
-        toast.error('Only PDF or JPEG files are allowed');
-        return null;
-      }
+  // Handle file input changes
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    setFile(selectedFile);
 
-      const data = new FormData();
-      data.append('file', file);
-
-      const res = await instance.post('/upload/files', data);
-      return res.data?.url || null; 
-    } catch (err) {
-      console.error("Upload Error:", err);
-      toast.error('File upload failed');
-      return null;
+    if (selectedFile && selectedFile.type.startsWith('image/')) {
+      setPreviewUrl(URL.createObjectURL(selectedFile));
+    } else {
+      setPreviewUrl(null);
     }
   };
 
+  // Upload file to server
+  const uploadFile = async () => {
+    if (!file) return ''; // If no file, return empty string
+
+    const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
+
+    // Validate file type
+    if (!allowedTypes.includes(file.type)) {
+      toast.error('Only PDF, JPEG, and PNG files are allowed');
+      return '';
+    }
+
+    try {
+      const form = new FormData();
+      form.append('file', file);
+
+      const res = await instance.post('/upload/files', form, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      // Check response and return the filename or URL
+      if (res.data && res.data.filename) {
+        return res.data.filename;
+      } else {
+        throw new Error('File upload failed');
+      }
+    } catch (error) {
+      console.error("File upload failed", error);
+      toast.error("File upload failed");
+      return '';
+    }
+  };
+
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    const uploadedFileUrl = file ? await upload() : null;
-    if (file && !uploadedFileUrl) {
+    // Upload the file and get the URL or filename
+    const resumeUrl = await uploadFile();
+
+    if (!resumeUrl) {
+      // If no file URL, prevent submission and show error
+      toast.error("File upload failed");
       setLoading(false);
       return;
     }
 
     try {
-      const res = await instance.post('/consultation', {
+      // Submit form data along with file URL
+      await instance.post('/consultation', {
         ...formData,
-        resume: uploadedFileUrl || '',
+        resume: resumeUrl,  // Include uploaded file URL
       });
 
-     
-
-
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: '',
-      });
-      setFile(null);
       toast.success('Details Submitted');
-      
-    } catch (err) {
-      toast.error(
-        err.response?.data?.error || 'Something went wrong. Please try again.'
-      );
+      setFormData({ firstName: '', lastName: '', email: '', message: '' });
+      setFile(null);
+      setPreviewUrl(null);
+    } catch (error) {
+      toast.error(error.response?.data?.error || 'Submission failed');
     } finally {
       setLoading(false);
     }
@@ -81,16 +106,14 @@ const Consultation = () => {
 
   return (
     <div className="bg-white">
-
-
-
       <div className="py-16 px-4 mx-auto md:px-40">
         <div className="p-3 border-b border-gray-200">
-          <Link to="/" className="flex items-center text-gray-600 hover:text-gray-800 text-lg  py-3 font-semibold">
+          <Link to="/" className="flex items-center text-gray-600 hover:text-gray-800 text-lg font-semibold py-3">
             <FaArrowLeftLong className="mr-2" size={20} />
             Back
           </Link>
         </div>
+
         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
@@ -112,6 +135,7 @@ const Consultation = () => {
               required
             />
           </div>
+
           <input
             name="email"
             type="email"
@@ -126,38 +150,21 @@ const Consultation = () => {
             <input
               type="file"
               id="file"
-              accept=".pdf,image/jpeg"
+              accept=".pdf,image/jpeg,image/png"
               className="hidden"
-              onChange={(e) => {
-                const selectedFile = e.target.files[0];
-                setFile(selectedFile);
-
-                if (selectedFile && selectedFile.type.startsWith('image/')) {
-                  setPreviewUrl(URL.createObjectURL(selectedFile));
-                } else {
-                  setPreviewUrl(null);
-                }
-              }}
+              onChange={handleFileChange}
             />
             <label htmlFor="file" className="flex items-center cursor-pointer rounded-md bg-[#F6F5FA] justify-center p-4 gap-3">
               <MdCloudUpload className="text-Primarycolor text-[30px]" />
               <span className="text-gray-900 font-medium text-lg">
-                {file ? file.name : "Upload your Resume (PDF or JPEG)"}
+                {file ? file.name : "Upload your Resume (PDF, JPEG, or PNG)"}
               </span>
             </label>
             {previewUrl ? (
-              <div className="mt-2">
-                <img
-                  src={previewUrl}
-                  alt="Preview"
-                  className="w-32 h-32 object-cover rounded-md border"
-                />
-              </div>
+              <img src={previewUrl} alt="Preview" className="w-32 h-32 object-cover rounded-md border" />
             ) : file ? (
               <p className="mt-2 text-sm text-gray-700">Uploaded File: {file.name}</p>
             ) : null}
-
-
           </div>
 
           <textarea

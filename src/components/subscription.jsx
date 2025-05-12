@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import instance from '../config/axios.config'
 import { Image7 } from './images'
 import { useNavigate } from 'react-router-dom'
-
+import { toast } from 'react-toastify';
 
 const Subscription = () => {
 
@@ -31,18 +31,23 @@ const Subscription = () => {
         setStatus('');
 
 
+
+   
        
         try {
             const res = await instance.post(`/subscribe`, formData);
+             toast.success('Message sent successfully!');
             setStatus('Message sent successfully!');
             setFormData({  email: ''});
 
             navigate("/");
         } catch (err) {
             setStatus('Something went wrong. Please try again later.');
+             toast.error(error.response.data.error);
+              toast.error('Something went wrong. Please try again.');
         } finally {
             setLoading(false);
-        }
+        }  
     };
 
     return (

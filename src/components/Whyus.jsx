@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Partnerimg } from "../components/images";
 import { IoMdCheckbox } from "react-icons/io";
-
+import useAOS from '../hooks/useAos';
 const WhyUs = () => {
+    useAOS()
     return (
         <div className="bg-white py-16 px-6  md:px-20   ">
 
@@ -14,7 +15,7 @@ const WhyUs = () => {
                     <p className="text-sm text-orange-500 ">Why Work With Us?</p>
                 </div>
 
-                <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4 leading-snug">
+                <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4 leading-snug"  data-aos="fade-up">
                     Partner with Us  for <br />
                     Exceptional Results
                 </h2>
@@ -87,7 +88,7 @@ const WhyUs = () => {
           className="relative gap-4"
         >
                 <div className="md:px-6  rounded-lg  overflow-hidden  h-full lg:h-auto">
-                    <img src={Partnerimg} alt="Diverse Team" className="w-full h-full object-cover" />
+                    <img src={Partnerimg} alt="Diverse Team" className="w-full h-full object-cover"   data-aos="zoom-up"/>
                 </div>
                 </motion.div>
             </div>

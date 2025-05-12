@@ -48,8 +48,8 @@ export default function Footer() {
               <li><Link to="/industries/media" className={textStyle}>Media</Link></li>
               <li><Link to="/industries/insurance" className={textStyle}>Insurance</Link></li>
               <li><Link to="/industries/technology" className={textStyle}>Technology</Link></li>
-              <li><Link to="/industries/ecommerce" className={textStyle}>Retail and E-Commerce</Link></li>
-              <li><Link to="/industries/banking" className={textStyle}>Banking and Financial Service</Link></li>
+              <li><Link to="/industries/e-commerce" className={textStyle}>Retail and E-Commerce</Link></li>
+              <li><Link to="/industries/finance-and-banking" className={textStyle}>Banking and Financial Service</Link></li>
             </ul>
           </div>
         </div>

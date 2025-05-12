@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import instance from '../config/axios.config';
 
 // Validation schema
 const loginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email address').required('Email is required'),
-  password: Yup.string().min(8, 'Password must be at least 8 characters.').required('Password is required'),
+  password: Yup.string().min(5, 'Password must be at least 8 characters.').required('Password is required'),
 });
 
 const Login = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [loginError, setLoginError] = useState(null);
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
@@ -24,22 +27,17 @@ const Login = () => {
       setLoginError(null);
 
       try {
-        const response = await fetch('https://your-api.com/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(values),
-        });
+        const response = await instance.post(
+          '/auth',
+          values,
+         
+        );
 
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.message || 'Login failed');
-        }
-
-        const responseData = await response.json();
-        console.log('Login successful:', responseData);
+        console.log('Login successful:', response.data);
         formik.resetForm();
+        navigate('/dashboard'); // change this route as needed
       } catch (error) {
-        setLoginError(error.message || 'An error occurred during login.');
+        setLoginError(error.response?.data?.message || 'Login failed');
       } finally {
         setIsSubmitting(false);
       }
@@ -53,8 +51,8 @@ const Login = () => {
       transition={{ duration: 0.5 }}
       className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-900"
     >
-      <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-6 space-y-6">
-        <h2 className="text-2xl font-semibold text-center text-gray-800">Login to AirtimeNigeria</h2>
+      <div className="w-full max-w-md bg-white shadow-lg p-6 space-y-6">
+        <h2 className="text-2xl font-semibold text-center text-gray-800">Admin Login</h2>
 
         <form onSubmit={formik.handleSubmit} className="space-y-4">
           {/* Email Field */}
@@ -99,30 +97,19 @@ const Login = () => {
             )}
           </div>
 
+
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+            className="w-full bg-gradient-to-r from-Primarycolor to-Primarycolor1 text-white py-3 px-4 rounded-md hover:from-Secondarycolor hover:to-Secondarycolor1 transition"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'Logging in...' : 'Login'}
           </button>
         </form>
 
-        {/* Forgot Password */}
-        <div className="text-center">
-          <a href="/forgot-password" className="text-sm text-blue-600 hover:underline">
-            Forgot Password?
-          </a>
-        </div>
 
-        {/* Register Link */}
-        <p className="text-center text-sm text-gray-600">
-          Don't have an account?{' '}
-          <a href="/register" className="text-green-600 hover:underline">
-            Create Account
-          </a>
-        </p>
+  
 
         {/* Error Message */}
         {loginError && (

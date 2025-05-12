@@ -20,8 +20,8 @@ const AutomotiveCustomerExperience = ({ title, subtitle, highlightedWords, image
         backgroundPosition: "center", // Keeps the focal point centered
         backgroundRepeat: "no-repeat", // Prevents tiling
       }}>
-      <div className=" flex justify-center items-center flex-col text-center px-6 md:px-20">
-        {title && <h2 className="text-3xl md:text-5xl pb-6   text-center max-w-4xl font-bold">
+      <div className=" flex justify-center items-center flex-col text-center px-4 md:px-20">
+        {title && <h2 className="text-4xl md:text-5xl pb-6   text-center md:max-w-4xl font-bold">
             
             {before}
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1">
@@ -29,9 +29,9 @@ const AutomotiveCustomerExperience = ({ title, subtitle, highlightedWords, image
             </span>
             {after}
            </h2>}
-        {subtitle && <p className="text-gray-600 text-base text-center max-w-4xl mb-8">{subtitle}</p>}
+        {subtitle && <p className="text-gray-600 text-base text-center md:max-w-4xl mb-8">{subtitle}</p>}
         {imageUrl && (
-          <div className="relative overflow-hidden rounded-lg  mx-auto max-w-4xl">
+          <div className="relative overflow-hidden rounded-lg  mx-auto md:max-w-4xl">
             <img
               className="w-full h-auto object-cover"
               src={imageUrl}

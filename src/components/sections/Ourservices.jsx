@@ -2,8 +2,10 @@ import React from "react";
 import Services from "../../assets/data/serviceslist";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import useAOS from "../../hooks/useAos";
 
 const BusinessSolutions = () => {
+  useAOS()
   return (
     <div className=" py-12">
       {/* Section 1 */}
@@ -12,7 +14,7 @@ const BusinessSolutions = () => {
                         <div className="rounded-full bg-gradient-to-r from-Secondarycolor to-Secondarycolor1 w-[10px] h-[10px] mr-2"></div>
                         <p className="text-sm text-orange-500 ">Our Services</p>
                     </div>
-        <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4 ">
+        <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4 " data-aos="fade-up">
           Transform Your Business  <br></br>with Expert Solutions
         </h2>
         <p className="mt-4 text-gray-700 text-center max-w-xl leading-relaxed">
@@ -26,7 +28,7 @@ const BusinessSolutions = () => {
         < Link to={service.link}
         key={index}
         
-        className="block bg-Primarycolor1 hover:bg-white p-5 rounded-lg text-emibold shadow-md shadow-Primarycolor text-left transition-colors duration-300 group"
+        className="block bg-Primarycolor1 hover:bg-white p-5 rounded-lg text-emibold shadow-md shadow-Primarycolor text-left transition-colors duration-300 group" data-aos="fade-in"
       ><h3 className="text-lg  text-white  group-hover:text-gray-600 font-semibold   mb-4">
               {service.title}
             </h3>

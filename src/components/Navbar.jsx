@@ -6,7 +6,7 @@ import { logo } from "./images";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-
+import { FaUserCircle } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -104,14 +104,21 @@ const Navbar = () => {
 
 
           <div>
-            <Link to={'/Contact'}><button className="bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold py-2 px-5 rounded-md transition-all duration-300">
+            <Link to={'/Contact'}><button className="bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold py-3 px-5 rounded-md transition-all duration-300">
             {t("Contact Us")}
             </button>
             </Link>
 
 
           </div>
-        </div>
+  </div>
+ <Link to={'/login'}>
+       
+            < FaUserCircle  classNamep="px-4" size={40} text="Primarycolor"
+          />
+            </Link>
+         
+      
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
