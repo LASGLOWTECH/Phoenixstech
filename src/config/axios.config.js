@@ -12,7 +12,7 @@ const isLocalhost = Boolean(
 );
 const API_URL = isLocalhost
     ? "http://localhost:5000"
-    : "https://supablogapi.supatechie.ga/api/";
+    : "https://nodeserver.phoenixstech.com";
 // const API_URL = "http://localhost:5000";
 
 const instance = axios.create({
