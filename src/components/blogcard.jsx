@@ -11,6 +11,7 @@ const Blogcard = () => {
     
 
   const [posts, setPosts] = useState([]);
+  
   const fetchDta = async () => {
     try {
       console.log("Fetching data from backend...");

@@ -1,5 +1,5 @@
 // images.js
-import React from 'react';
+;
 import Careersimg from '../assets/images/Careersimg.png';
 import logo from '../assets/images/logo.png';
 import Backdrop from '../assets/images/Backdrop.jpg';

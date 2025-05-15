@@ -3,6 +3,7 @@ import { Image3 } from '../components/images';
 import FaqSection from '../components/Faq';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import Subscription from '../components/subscription';
 import instance from '../config/axios.config';
 import {
   FaEnvelope, FaPhoneAlt, FaMapMarkerAlt,
@@ -33,12 +34,12 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-   
+
 
     try {
       const res = await instance.post('/contacts', formData);
       toast.success('Message sent successfully!');
-      
+
       setFormData({ firstName: '', lastName: '', email: '', subject: '', message: '' });
     } catch (error) {
       if (error.response?.status === 400) {
@@ -195,6 +196,9 @@ const ContactSection = () => {
         </div>
       </div>
 
+
+
+<Subscription/>
       <FaqSection />
 
 
