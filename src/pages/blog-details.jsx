@@ -99,13 +99,21 @@ const BlogDetails = () => {
         {/* Cover Image */}
         {/* Cover Image */}
         <div className="relative">
-          <img
-            className="w-full max-h-[500px] object-cover rounded-md"
-            src={`../upload/images/${post.cover}`}
-            alt="blog"
-          />
-        </div>
 
+
+          {post.cover && (
+            <img
+              className="w-full max-h-[500px] object-cover rounded-md"
+              src={
+                window.location.hostname === "localhost"
+                  ? `/upload/images/${encodeURIComponent(post.cover)}`
+                  : `https://nodeserver.phoenixstech.com/uploads/images/${encodeURIComponent(post.cover)}`
+              }
+              alt="blog"
+            />
+          )}
+
+        </div>
 
         {/* Blog Title */}
         <h2 className="md:text-3xl text-Darkash py-5 mb-5 text-3xl font-semibold">
