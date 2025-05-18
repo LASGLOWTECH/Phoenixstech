@@ -35,10 +35,28 @@ const RelatedPosts = ({ currentPostId }) => {
             key={post.id}
             className="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 overflow-hidden"
           >
-            <img src={`../upload/images/${post.cover}`} alt={post.title} className="w-full h-[400px]  object-cover" />
+
+
+
+
+
+            <img
+              src={
+                window.location.hostname === "localhost"
+                  ? `/upload/images/${post.cover}`
+                  : `https://nodeserver.phoenixstech.com/uploads/images/${post.cover}`
+              } alt={post.title} className="w-full h-[400px]  object-cover" />
             <div className="p-4">
               <h4 className="text-xl font-bold text-gray-800">{post.title}</h4>
-              <p className="text-sm text-gray-500 mt-2">{post.timestamp}</p>
+              <p className="text-sm text-gray-500 mt-2">
+                
+                 Posted:{" "}
+                {new Date(post.timestamp).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",})}
+                
+              </p>
               <div className="flex items-center text-Primarycolor gap-1 mt-2 font-semibold">
                 Read More <PiArrowCircleUpRightFill />
               </div>

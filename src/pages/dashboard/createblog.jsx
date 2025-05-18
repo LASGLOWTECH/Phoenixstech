@@ -1,12 +1,11 @@
-
 import { FaCirclePlus } from "react-icons/fa6";
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-
 import instance from '../../config/axios.config';
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
 const Create = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -20,12 +19,13 @@ const Create = () => {
   const [existingImage, setExistingImage] = useState(state?.cover || "");
   const [shares, setShares] = useState(state?.shares || 0);
 
+  // ✅ WORKING UPLOAD FUNCTION
   const upload = async () => {
     try {
       const formData = new FormData();
       formData.append('file', file);
       const res = await instance.post("/upload/images", formData);
-      return res.data; // This should return the image URL
+      return res.data; // returns filename like "1747454546-image.jpg"
     } catch (error) {
       console.error("Upload Error:", error);
       return null;
@@ -34,21 +34,24 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const cover = file ? await upload() : existingImage;
+    const uploaded = file ? await upload() : null;
+
+    const isLocal = window.location.hostname === "localhost";
+    const cover = uploaded
+      ? isLocal
+        ? `/upload/images/${uploaded}`
+        : `https://nodeserver.phoenixstech.com/uploads/images/${uploaded}`
+      : existingImage;
 
     try {
       if (postid) {
-        // Update post
         await instance.put(`/posts/${postid}`, {
           title,
           content,
           shares,
           cover,
         });
-
-       
       } else {
-        // Create new post
         await instance.post(`/posts`, {
           title,
           content,
@@ -56,80 +59,76 @@ const Create = () => {
           cover,
         });
       }
-        toast.success('Blog created  successfully!');
-            
-      navigate("/blog"); // Redirect after success
+
+      toast.success('Blog created successfully!');
+      navigate("/blog");
     } catch (error) {
-          if (error.response?.status === 400) {
-            toast.error(error.response.data.error);
-          } else {
-            toast.error('Unable to create blog. Please try again.');
-          }
-        }
+      if (error.response?.status === 400) {
+        toast.error(error.response.data.error);
+      } else {
+        toast.error('Unable to create blog. Please try again.');
+      }
+    }
   };
 
   return (
-    <div className="write my-10 mx-auto ">
-     <div className="">
-     <h1 className="text-2xl font-bold text-gray-800 mb-4">Create New BLog</h1>
-
+    <div className="write my-10 mx-auto">
       <div>
+        <h1 className="text-2xl font-bold text-gray-800 mb-4">Create New Blog</h1>
+
         <input
           type="text"
-          className="w-full border-none p-4 text-lg text-Darkash S bg-[#F6F5FA] focus:outline-none focus:ring-2   rounded-md"
+          className="w-full border-none p-4 text-lg bg-[#F6F5FA] focus:outline-none focus:ring-2 rounded-md"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
 
-        <div className='h-[300px] min-w-full overflow-scroll border-none '>
+        <div className='h-[300px] min-w-full overflow-scroll border-none'>
           <ReactQuill
-            className='text-gray-900 h-full w-full border-none p-4 text-lg text-Darkash focus:outline-none focus:ring-2   rounded-md" bg-gray-50'
+            className='text-gray-900 h-full w-full p-4 text-lg bg-gray-50 rounded-md'
             theme="snow"
             value={content}
             onChange={setContent}
           />
         </div>
-      </div>
 
-      <div className='mx-3 col-span-1'>
-        <div className='flex flex-col'>
+        <div className='mx-3 col-span-1'>
+          <div className='flex flex-col'>
+            <input
+              type='file'
+              id='file'
+              className='hidden'
+              onChange={(e) => setFile(e.target.files[0])}
+            />
 
-          <input
-            type='file'
-            id='file'
-            className='hidden'
-            onChange={(e) => setFile(e.target.files[0])}
-          />
+            <label htmlFor='file' className='text-gray-700 py-4 flex items-center font-medium cursor-pointer'>
+              <span className="flex items-center">
+                <FaCirclePlus className="text-4xl text-blue-600" />
+                <p className="ml-3 hidden md:block">Upload Cover</p>
+              </span>
+              <button
+                className='ml-auto px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-md shadow transition'
+                onClick={handleSubmit}
+              >
+                Publish
+              </button>
+            </label>
 
-          <label htmlFor='file' className='text-Darkash py-4 flex flex-row items-center font-medium cursor-pointer'>
-            
-            <span className="flex flex-row items-center justify-between"> < FaCirclePlus className="text-4xl fill-Primarycolor" /> 
-           <p className="ml-3 hidden md:block"> Upload Cover</p>
-</span>
-           
-           <div className=' '>
-    
-          <button className='mx-6 px-6 py-3 bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold rounded-md transition-all duration-300"' onClick={handleSubmit}>Publish</button>
+            {existingImage && !file && (
+              <img
+                src={
+                  existingImage.startsWith('http') || isLocal
+                    ? existingImage
+                    : `https://nodeserver.phoenixstech.com/uploads/images/${existingImage}`
+                }
+                alt="Current Post"
+                className="mt-2 w-full rounded-md"
+              />
+            )}
+          </div>
         </div>
-
-          </label>
-
-          
-          {existingImage && !file && (
-            <img src={existingImage} alt="Current Post" className="mt-2 w-full" />
-          )}
-
-       
-        </div>
-
-        
       </div>
-      </div>
-
-
-
-   
     </div>
   );
 };

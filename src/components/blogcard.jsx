@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // 
 import instance from "../config/axios.config";
 import { IoShareSocialSharp } from "react-icons/io5";
@@ -8,38 +8,38 @@ import { Link } from "react-router-dom";
 const Blogcard = () => {
     const blogsPerPage = 3;
     const [currentPage, setCurrentPage] = useState(1);
-    
-
-  const [posts, setPosts] = useState([]);
-  
-  const fetchDta = async () => {
-    try {
-      console.log("Fetching data from backend...");
-      const res = await instance.get("/posts");
-      
-      console.log("Response received:", res.data);  // Log response data
-      setPosts(res.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);  // Log the error
-    }
-  };
 
 
-  useEffect(() => {
-    console.log("useEffect triggered");
-    fetchDta()
+    const [posts, setPosts] = useState([]);
+
+    const fetchDta = async () => {
+        try {
+            console.log("Fetching data from backend...");
+            const res = await instance.get("/posts");
+
+            console.log("Response received:", res.data);  // Log response data
+            setPosts(res.data);
+        } catch (error) {
+            console.error("Error fetching data:", error);  // Log the error
+        }
+    };
 
 
+    useEffect(() => {
+        console.log("useEffect triggered");
+        fetchDta()
 
 
 
-  }, [])
+
+
+    }, [])
 
 
     const totalPages = Math.ceil(posts.length / blogsPerPage);
 
     // Get the blogs for the current page
-    const currentBlogs =posts.slice(
+    const currentBlogs = posts.slice(
         (currentPage - 1) * blogsPerPage,
         currentPage * blogsPerPage
     );
@@ -95,11 +95,15 @@ const Blogcard = () => {
                         key={index}
                         className="block bg-[#F5F7FA] hover:bg-white p-5 rounded-lg shadow-md shadow-Primarycolor text-left transition-colors duration-300"
                     >
-                        
+
                         <Link to={`/blog/${blog.id}`} key={blog.id} className="block">
 
                             <img
-                               src={`../upload/images/${blog.cover}`}
+                                src={
+                                    window.location.hostname === "localhost"
+                                        ? `/upload/images/${blog.cover}`
+                                        : `https://nodeserver.phoenixstech.com/uploads/images/${blog.cover}`
+                                }
                                 alt="blog"
                                 className="w-full h-56 md:h-64 lg:h-60 xl:h-64 object-cover rounded-md"
                             />
@@ -108,7 +112,7 @@ const Blogcard = () => {
                             </h4>
                         </Link>
                         <div className="flex justify-left items-center">
-                            
+
                             <p className="text-grey-100 pe-6 text-[14px]">
                                 {blog.date}
                             </p>
@@ -121,12 +125,12 @@ const Blogcard = () => {
                             <span className="text-[14px]">{shares[blog.blogid]}</span>
                         </div>
 
-                        
-                        <p className="text-grey-100 text-base my-4 line-clamp-3"  dangerouslySetInnerHTML={{ __html: blog.content }}  ></p>
+
+                        <p className="text-grey-100 text-base my-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: blog.content }}  ></p>
 
 
                         <Link to={`/blog/${blog.id}`}>
-                      
+
                             <div className="flex items-center pt-6 group cursor-pointer transition-all duration-500">
                                 <p className="ml-2 text-Primarycolor2 font-medium transition-all duration-500">
                                     Read Article
