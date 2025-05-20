@@ -5,9 +5,20 @@ import CareerOpportunities from '../components/Job';
 import CareersContact from '../components/Careercontact';
 import {CareerHero} from '../components/images';
 import { motion } from 'framer-motion';
+import SEO from '../utils/seo';
 export default function Careers() {
   return (
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-20">
+
+
+        
+              <SEO
+                     title="Grow Your Career with Phoenix Tech,"
+                      description="Join a team that values innovation, collaboration, and personal growth"
+                      keywords="Careers,innovation, collaboration,"
+                      url="https://www.pheonixstech.com/Careers"
+                  
+                    />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Text Content */}

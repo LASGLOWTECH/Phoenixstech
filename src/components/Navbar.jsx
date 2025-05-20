@@ -105,7 +105,7 @@ const Navbar = () => {
         </div>
 
         <Link to={'/login'}>
-          <FaUserCircle className="px-4" size={40} color="Primarycolor" />
+          <FaUserCircle className="px-4" size={60} color="Primarycolor" />
         </Link>
 
         {/* Mobile Menu Toggle */}

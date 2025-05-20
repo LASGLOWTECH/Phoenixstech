@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import instance from '../config/axios.config';
 
+import { FaArrowLeftLong } from "react-icons/fa6";
+import SEO from '../utils/seo';
 // Validation schema
 const loginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email address').required('Email is required'),
@@ -14,7 +16,10 @@ const loginSchema = Yup.object().shape({
 const Login = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [loginError, setLoginError] = useState(null);
+
+
   const navigate = useNavigate();
+
 
   const formik = useFormik({
     initialValues: {
@@ -30,7 +35,7 @@ const Login = () => {
         const response = await instance.post(
           '/auth',
           values,
-         
+
         );
 
         console.log('Login successful:', response.data);
@@ -51,6 +56,24 @@ const Login = () => {
       transition={{ duration: 0.5 }}
       className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-900"
     >
+
+      <SEO
+                                 title=" Admin | Login"
+                                  description="Login to admin dashboard"
+                                  keywords="Login"
+                                  url="https://www.pheonixstech.com/login"
+                              
+                                />
+
+      <div className="p-3 border-b border-gray-200">
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center justify-start text-white hover:text-white text-lg font-semibold"
+        >
+          <FaArrowLeftLong className="mr-2" size={20} />
+          Back
+        </button>
+      </div>
       <div className="w-full max-w-md bg-white shadow-lg p-6 space-y-6">
         <h2 className="text-2xl font-semibold text-center text-gray-800">Admin Login</h2>
 
@@ -109,7 +132,7 @@ const Login = () => {
         </form>
 
 
-  
+
 
         {/* Error Message */}
         {loginError && (

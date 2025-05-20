@@ -5,7 +5,7 @@ import { MdCloudUpload } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import instance from '../config/axios.config';
 import useAOS from '../hooks/useAos';
-
+import SEO from '../utils/seo';
 const Consultation = () => {
   useAOS();
 
@@ -107,6 +107,15 @@ const Consultation = () => {
 
   return (
     <div className="bg-white">
+
+      
+                    <SEO
+                           title="Consultatation,"
+                            description="Get across to us today for any question you might need"
+                            keywords="Consultations, Subscription,"
+                            url="https://www.pheonixstech.com/consutation"
+                        
+                          />
       <div className="py-16 px-4 mx-auto md:px-40">
         <div className="p-3 border-b border-gray-200">
           <Link to="/" className="flex items-center text-gray-600 hover:text-gray-800 text-lg font-semibold py-3">
