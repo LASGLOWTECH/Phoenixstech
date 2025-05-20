@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import Subscription from '../components/subscription';
 import instance from '../config/axios.config';
+import SEO from '../utils/seo';
 import {
   FaEnvelope, FaPhoneAlt, FaMapMarkerAlt,
   FaLinkedin, FaInstagram, FaFacebookF, FaTwitter
@@ -52,8 +53,16 @@ const ContactSection = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      {/* Hero Section */}
+
+<SEO
+       title="Contact Us | PheonixStech"
+        description="Learn more about PheonixStech—our people, our purpose, and how innovation drives our world-class tech solutions."
+        keywords="Contact us"
+        url="https://www.pheonixstech.com/contact"
+    
+      />
+
+         
       <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
         <img
           src={Image3}

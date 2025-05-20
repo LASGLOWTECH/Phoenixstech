@@ -7,7 +7,7 @@ import ValuesAndTeamSection from "../components/ValuesAndTeam";
 import MeetTeam from "../components/sections/MeetTheteam";
 import TestimonialSection from "../components/TestimonialSection";
 import JoinUs from "../components/Joinus";
-
+import SEO from "../utils/seo";
 const generateMotionVariants = (index) => ({
   animate: {
     x: ["100%", "-100%"], // Moves continuously across the screen
@@ -46,6 +46,16 @@ const AboutUs = () => {
     backgroundRepeat: "no-repeat", // Prevents tiling
   }}
 >
+  
+  <SEO
+        title="About Us - PheonixStech"
+        description="Learn more about PheonixStech—our people, our purpose, and how innovation drives our world-class tech solutions."
+        keywords="About PheonixStech, Tech Company, Meet the Team, Company Values"
+        url="https://www.pheonixstech.com/about"
+  
+      />
+
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}

@@ -38,38 +38,39 @@ const Consultation = () => {
 
   // Upload file to server
   const uploadFile = async () => {
-    if (!file) return ''; // If no file, return empty string
+  if (!file) return ''; // If no file, return empty string
 
-    const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
+  const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
 
-    // Validate file type
-    if (!allowedTypes.includes(file.type)) {
-      toast.error('Only PDF, JPEG, and PNG files are allowed');
-      return '';
+  if (!allowedTypes.includes(file.type)) {
+    toast.error('Only PDF, JPEG, and PNG files are allowed');
+    return '';
+  }
+
+  try {
+    const form = new FormData();
+    form.append('file', file);
+
+    const res = await instance.post('/upload/files', form, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+
+    if (res.data && res.data.filename) {
+      const isLocal = window.location.hostname === "localhost";
+      return isLocal
+        ? `/upload/files/${res.data.filename}`
+        : `https://nodeserver.phoenixstech.com/uploads/files/${res.data.filename}`;
+    } else {
+      throw new Error('File upload failed');
     }
-
-    try {
-      const form = new FormData();
-      form.append('file', file);
-
-      const res = await instance.post('/upload/files', form, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-
-      // Check response and return the filename or URL
-      if (res.data && res.data.filename) {
-        return res.data.filename;
-      } else {
-        throw new Error('File upload failed');
-      }
-    } catch (error) {
-      console.error("File upload failed", error);
-      toast.error("File upload failed");
-      return '';
-    }
-  };
+  } catch (error) {
+    console.error("File upload failed", error);
+    toast.error("File upload failed");
+    return '';
+  }
+};
 
   // Handle form submission
   const handleSubmit = async (e) => {

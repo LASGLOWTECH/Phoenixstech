@@ -1,7 +1,7 @@
 import React from 'react'
 import Blogcard from '../components/blogcard';
 import instance from '../config/axios.config';
-
+import SEO from '../utils/seo';
 
 import Subscription from '../components/subscription';
 // import { posts } from "../components/blogdata";
@@ -41,12 +41,25 @@ const Blogs = () => {
   }, [])
   return (
     <div className="overflow-hidden py-16  bg-cover bg-center text-center"
+
+    
       style={{
         backgroundImage: `url(${Line})`,
         backgroundSize: "cover",     // Ensures it covers the whole area
         backgroundPosition: "center", // Keeps the focal point centered
         backgroundRepeat: "no-repeat", // Prevents tiling
-      }}>
+      }}
+      
+      
+      >
+        
+        <SEO
+               title="Our blogs and latest news"
+                description="Learn more about PheonixStech—our people, our purpose, and how innovation drives our world-class tech solutions."
+                keywords="Our Blogs"
+                url="https://www.pheonixstech.com/blogs"
+            
+              />
 
 
       <section className="  flex items-center justify-center flex-col mb-12">
