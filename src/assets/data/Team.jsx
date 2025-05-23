@@ -18,7 +18,7 @@ const Team = [
         title: "Chief Operations Officer (COO)",
         description:
             "Responsible for streamlining processes and overseeing daily operations, optimizing services, and expanding the client base.",
-        Picture: Frame1,
+        Picture: Frame2,
         link: "/services/web-development"
     },
 
@@ -27,7 +27,7 @@ const Team = [
         title: "Head of Customer Success",
         description:
             "Leads the customer success team, building strong relationships and ensuring high client retention through exceptional service.",
-        Picture: Frame1,
+        Picture: Frame3,
         link: "/services/web-development"
     },
 
@@ -37,7 +37,7 @@ const Team = [
         title: "Chief Technology Officer (CTO)",
         description:
             "The technical expert who ensures the delivery of cutting-edge solutions, leveraging expertise in software development and IT infrastructure.",
-        Picture: Frame1,
+        Picture: Frame4,
         link: "/services/web-development"
     },
 

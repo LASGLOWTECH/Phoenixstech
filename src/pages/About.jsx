@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import OurStorySection from "../components/sections/OurStory";
 import { Lady1 } from "../components/images";
+import { Woman1, Woman2 } from "../components/images";
 import { Line } from "../components/images";
 
 import ValuesAndTeamSection from "../components/ValuesAndTeam";
@@ -34,7 +35,7 @@ const calculateOpacity = (xPosition, screenWidth) => {
 };
 
 const AboutUs = () => {
-  const images = [Lady1, Lady1, Lady1, Lady1, Lady1];
+  const images = [Lady1,Woman1,Woman2, Lady1, Woman2];
 
   return (
     <section

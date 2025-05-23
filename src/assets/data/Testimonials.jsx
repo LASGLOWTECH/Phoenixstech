@@ -33,7 +33,7 @@ const Testimony = [
         id: 3,
         name: "Linda Ray",
      role: "Operations Lead, SoftCom",
-        image: "/linda.jpg",
+        image: Frame2,
       text:
             "Highly professional and always on time. A truly multilingual support team with outstanding results.",
     
