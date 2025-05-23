@@ -20,16 +20,16 @@ const Hero = () => {
           className="text-center md:text-left"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl mx-auto font-bold text-grey-100 leading-tight">
-            {t("Driving Business")} <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1 ">Excellence</span><br />
-            Through Multilingual Business Support
+          {t("Driving Business")} <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1 ">{t("Excellence")}</span><br />
+            {t("Through Multilingual Business Support")} 
           </h1>
           <p className="mt-4 text-gray-600 text-sm   md:text-base  mx-auto md:mx-0">
-            Empowering businesses across industries with tailored customer service solutions that build stronger relationships,
-            boost satisfaction, and scale success globally and efficiently.
+            {t("Empowering businesses across industries with tailored customer service solutions that build stronger relationships, boost satisfaction, and scale success globally and efficiently.")}
           </p>
-          <Link to={'/Contact'}><button className="mt-6 px-6 py-3 bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold rounded-md transition-all duration-300">
-            Get In Touch
-          </button>
+              <Link  to={"/contact"}
+            className="mt-6 inline-block px-6 py-3 bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold rounded-md transition-all duration-300"
+          >
+            {t("Get In Touch")}
           </Link>
         </motion.div>
 

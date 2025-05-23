@@ -14,64 +14,67 @@ import {
 
 
 const Servicet = [
+
+
+  
     {
-        title: "Data Analytics Excellence",
+      titleKey: "Data Analytics Excellence",
         icon: <FaChartBar className="w-6 h-6 text-blue-600" />,
-        description:
+       descriptionKey:
           "We assemble a team of specialists to conduct thorough analysis and deliver customized data-driven solutions tailored to your needs.",
       },
       {
-        title: "UX & Business Analysis",
+      titleKey: "UX & Business Analysis",
         icon: <FaUserTie className="w-6 h-6 text-pink-600" />,
-        description:
+        descriptionKey:
           "Expert services in UX design, UI/Usability, graphics, and advanced business systems analysis to align with your goals.",
       },
       {
-        title: "Project Management",
+    titleKey: "Project Management",
         icon: <FaTasks className="w-6 h-6 text-green-600" />,
-        description:
+      descriptionKey:
           "Experienced team handles complex projects and delivers seamless solutions across various project models.",
       },
       {
-        title: "Software Development",
+    titleKey: "Software Development",
         icon: <FaLaptopCode className="w-6 h-6 text-yellow-600" />,
-        description:
+       descriptionKey:
           "Specialists in advanced IT solutions for web, desktop, and mobile platforms with a focus on performance and innovation.",
       },
       {
-        title: "Quality Assurance",
+      titleKey: "Quality Assurance",
         icon: <BiSolidCheckShield  className="w-6 h-6 text-indigo-600" />,
-        description:
+       descriptionKey:
           "Skilled consultants manage testing and QA processes across technologies to ensure reliable solutions.",
       },
       {
-        title: "Admin & Security",
+     titleKey: "Admin & Security",
         icon: <FaLock className="w-6 h-6 text-red-500" />,
-        description:
+   descriptionKey:
           "We execute Microsoft Technologies projects focusing on optimization, automation, and security.",
       },
       {
-        title: "Banking IT Solutions",
+    titleKey: "Banking IT Solutions",
         icon: <FaUniversity className="w-6 h-6 text-cyan-500" />,
-        description:
+     descriptionKey:
           "We support IT projects in the banking sector, offering both on-site and remote system support.",
       },
       {
-        title: "IT Engineering Solutions",
+   titleKey: "IT Engineering Solutions",
         icon: <FaCogs className="w-6 h-6 text-orange-500" />,
-        description:
+     descriptionKey:
           "We deliver IT solutions for industries like automotive, rail, and oil & gas, with training programs.",
       },
       {
-        title: "ERP Implementation",
+       titleKey: "ERP Implementation",
         icon: <FaDatabase className="w-6 h-6 text-violet-500" />,
-        description:
+       descriptionKey:
           "Optimize business operations through ERP, supporting owners with project workflow and data security.",
       },
       {
-        title: "Innovation & R&D",
+    titleKey: "Innovation & R&D",
         icon: <FaLightbulb className="w-6 h-6 text-teal-500" />,
-        description:
+        descriptionKey:
           "We build innovative IT solutions and develop tools that improve the efficiency of daily operations.",
       },
   ];

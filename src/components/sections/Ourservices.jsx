@@ -2,9 +2,12 @@ import React from "react";
 import Services from "../../assets/data/serviceslist";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import useAOS from "../../hooks/useAos";
 
 const BusinessSolutions = () => {
+  const { t } = useTranslation();
+
   useAOS()
   return (
     <div className=" py-12">
@@ -12,13 +15,13 @@ const BusinessSolutions = () => {
       <section className=" px-6 flex items-center justify-center flex-col mb-12">
       <div className="flex mb-4 items-center justify-left flex-row ">
                         <div className="rounded-full bg-gradient-to-r from-Secondarycolor to-Secondarycolor1 w-[10px] h-[10px] mr-2"></div>
-                        <p className="text-sm text-orange-500 ">Our Services</p>
+                    <p className="text-sm text-orange-500 ">{t("Our Services")}</p>
                     </div>
         <h2 className="text-3xl md:text-4xl text-center font-semibold mb-4 " data-aos="fade-up">
-          Transform Your Business  <br></br>with Expert Solutions
+        {t("Transform Your Business")}  <br></br>{t("with Expert Solutions")}
         </h2>
         <p className="mt-4 text-gray-700 text-center max-w-xl leading-relaxed">
-          Tailored customer support to boost satisfaction and drive growth.
+          {t("Tailored customer support to boost satisfaction and drive growth.")}
         </p>
       </section>
 
@@ -30,9 +33,9 @@ const BusinessSolutions = () => {
         
         className="block bg-Primarycolor1 hover:bg-white p-5 rounded-lg text-emibold shadow-md shadow-Primarycolor text-left transition-colors duration-300 group" data-aos="fade-in"
       ><h3 className="text-lg  text-white  group-hover:text-gray-600 font-semibold   mb-4">
-              {service.title}
+              {t(service.titleKey)}
             </h3>
-            <p className="text-white   text-base   group-hover:text-gray-600  mb-4">{service.description}</p>
+            <p className="text-white   text-base   group-hover:text-gray-600  mb-4"> {t(service.descriptionKey)}</p>
 
             <div className="relative">
               <img
