@@ -57,7 +57,7 @@ const Blogs = () => {
                title="Our blogs and latest news"
                 description="Learn more about PheonixStech—our people, our purpose, and how innovation drives our world-class tech solutions."
                 keywords="Our Blogs"
-                url="https://www.pheonixstech.com/blogs"
+                url="https://www.pheonixstech.com/blog"
             
               />
 

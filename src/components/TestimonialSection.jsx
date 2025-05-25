@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import  { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";

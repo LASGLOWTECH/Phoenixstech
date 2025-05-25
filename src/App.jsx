@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import TawkToWidget from './utils/tawkit';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import SiteLoader from './components/loader';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Home } from "./pages/Home";
@@ -55,6 +55,8 @@ const AppLayout = () => {
 
   return (
     <>
+
+
       {!shouldHideLayout && <Navbar />}
 
       <Routes>
@@ -113,6 +115,7 @@ const AppLayout = () => {
 
 const App = () => (
   <Router>
+<SiteLoader /> 
     <AppLayout />
   </Router>
 );

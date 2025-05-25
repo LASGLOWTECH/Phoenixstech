@@ -1,5 +1,5 @@
 // images.js
-;
+import Wrongpage from '../assets/images/404.png';
 import Careersimg from '../assets/images/Careersimg.png';
 import logo from '../assets/images/logo.png';
 import Backdrop from '../assets/images/Backdrop.jpg';
@@ -105,4 +105,5 @@ export {
   Woman2,
 
   // Continue exporting all images
+  Wrongpage
 };
