@@ -49,9 +49,9 @@ const AboutUs = () => {
 >
   
   <SEO
-        title="About Us - Pheonixstech"
+        title="About Us - Phoenixstech"
         description="Learn more about PheonixStech—our people, our purpose, and how innovation drives our world-class tech solutions."
-        keywords="About PheonixStech, Tech Company, Meet the Team, Company Values"
+        keywords="About Phoenixstech, Tech Company, Meet the Team, Company Values"
         url="https://www.pheonixstech.com/About"
   
       />
