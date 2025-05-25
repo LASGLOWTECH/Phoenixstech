@@ -104,11 +104,11 @@ const Create = () => {
 
             <label htmlFor='file' className='text-gray-700 py-4 flex items-center font-medium cursor-pointer'>
               <span className="flex items-center">
-                <FaCirclePlus className="text-4xl text-blue-600" />
+                <FaCirclePlus className="text-4xl fill-Primarycolor" />
                 <p className="ml-3 hidden md:block">Upload Cover</p>
               </span>
               <button
-                className='ml-auto px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-md shadow transition'
+                className='ml-auto px-6 py-3 bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold rounded-md transition-all duration-300'
                 onClick={handleSubmit}
               >
                 Publish

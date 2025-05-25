@@ -133,7 +133,7 @@ const Media = () => {
 
       <SectionWrapper>
         <SuccessSnapshot
-          title="Success Snapshot: Streaming Nova"
+          title="Success Snapshot: Global Media"
           subtitle="A major media platform was hit with high support demand during new content drops and user account issues."
           solutionPoints={["Launched a surge support model for release windows", "Created a rich self-service hub for subscriptions and tech issues", "Integrated analytics to monitor and respond to trending problems"]}
           resultPoints={[

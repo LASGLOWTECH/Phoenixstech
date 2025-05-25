@@ -126,7 +126,7 @@ const CareerContent = () => {
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="text-center space-y-4">
           <h2 className="text-3xl sm:text-4xl  font-semibold text-gray-900 tracking-tight">
-            Explore Career Opportunities with <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1"><br></br>Phoenix Tech</span>
+            Explore Career Opportunities with <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1"><br></br>Phoenixs Tech</span>
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-8">

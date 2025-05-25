@@ -7,6 +7,7 @@ import BenefitsGrid from '../../components/sections/benefitcard'
 import SectionWrapper from '../../components/sections/Sectionwrapper'
 import CTASection from '../../components/sections/ctasection'
 import Testimonial from '../../components/sections/Testimonials'
+import SEO from '../../utils/seo'
 // icons
 import { PiPhoneCallFill } from "react-icons/pi";
 import { FaRankingStar } from "react-icons/fa6";
@@ -89,6 +90,13 @@ function InboundCallCenter() {
   return (
 
     <div className="bg-gray-50">
+      
+                    <SEO
+                           title="Professional Call Center Solutions That Connect and Convert"
+                            description="Our comprehensive call center solutions are built to streamline communication,
+          improve customer experience, and deliver measurable business impact."
+                            keywords="Careers,innovation, collaboration,"
+                            url="https://www.pheonixstech.com/outsourcing-services/inbound-call-center"/>
 
 <SectionWrapper>
 

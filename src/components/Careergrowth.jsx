@@ -18,10 +18,10 @@ const CareerGrowth = () => {
             <div className="max-w-7xl mx-auto text-center space-y-8">
                 <div className="space-y-4">
                     <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 tracking-tight">
-                        Grow Your Career with Phoenix Tech
+                        Grow Your Career with Phoenixs Tech
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        At Phoenix Tech, we believe in nurturing talent and providing endless opportunities
+                        At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities
                         for growth. Whether you&apos;re looking to enhance your skills, take on new challenges, or
                         make a meaningful impact, you&apos;ll find a place to thrive with us.
                     </p>

@@ -137,7 +137,7 @@ const Technology = () => {
 
       <SectionWrapper>
         <SuccessSnapshot
-          title="Success Snapshot: CoreTech Systems"
+          title="Success Snapshot: Leron Tech Limited"
           subtitle="A fast-scaling tech company struggled with growing global support needs and technical onboarding issues."
           solutionPoints={["Built a 24/7 global support model with region-specific teams", "Implemented in-app guidance for faster onboarding","Standardized product knowledge to reduce resolution time"]}
           resultPoints={[

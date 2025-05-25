@@ -134,13 +134,13 @@ const featureItem2 = [
 
       <SectionWrapper>
         <SuccessSnapshot
-          title="Success Snapshot: National Health Alliance"
+          title="Success Snapshot:  National Health provider"
           subtitle="A nationwide healthcare provider was overwhelmed by patient inquiries during seasonal health surges."
           solutionPoints={["Launched a multilingual patient support center to manage volume", "Created a HIPAA-compliant knowledge base for consistent answers","Delivered training focused on empathy and urgent care scenarios"]}
           resultPoints={[
-            { value: "42", label: "Reduction in response time" },
-            { value: "38", label: "Increase in customer satisfaction" },
-            { value: "27", label: "Growth in repeat purchases" },
+            { value: "50%", label: "Reduction in response time" },
+            { value: "35%", label: "Increase in customer satisfaction" },
+            { value: "23%", label: "Growth in repeat purchases" },
           ]}
 
           imageUrl={Industries07}

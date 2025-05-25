@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // import navigate
+import { useNavigate } from "react-router-dom";
 import instance from "../../config/axios.config";
-import { FaTrash } from "react-icons/fa";
-import { FaEdit } from "react-icons/fa"; // optional: edit icon
+import { FaTrash, FaEdit } from "react-icons/fa";
 import { toast } from 'react-toastify';
 
 const BlogList = () => {
@@ -45,6 +44,7 @@ const BlogList = () => {
           >
             <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full">
               <p className="text-lg font-semibold text-gray-800 w-full sm:w-1/3 truncate">{blog.title}</p>
+                  <p className="text-lg font-semibold text-gray-800 w-full sm:w-1/3 truncate">{blog.content}</p>
               <p className="text-sm text-gray-600 w-full sm:w-1/3">
                 Posted:{" "}
                 {new Date(blog.timestamp).toLocaleDateString("en-US", {
@@ -56,7 +56,7 @@ const BlogList = () => {
               <div className="flex gap-4 sm:ml-auto">
                 <button
                   onClick={() =>
-                    navigate("/dashboard/create", {
+                    navigate("/dashboard/updateblog", {
                       state: {
                         postid: blog.id,
                         title: blog.title,

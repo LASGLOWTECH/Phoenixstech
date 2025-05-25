@@ -7,7 +7,7 @@ const testimonials = [
     name: "Daniel Mensah",
     position: "Operations Manager, BrightEdge Logistics",
     message:
-      "Phoenix Tech has completely transformed how we handle customer interactions. Our response time is faster, and our clients are noticeably happier.",
+      "Phoenixs Tech has completely transformed how we handle customer interactions. Our response time is faster, and our clients are noticeably happier.",
   },
   {
     name: "Alicia Raymond",

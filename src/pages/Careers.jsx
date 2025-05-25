@@ -13,7 +13,7 @@ export default function Careers() {
 
         
               <SEO
-                     title="Grow Your Career with Phoenix Tech,"
+                     title="Grow Your Career with Phoenixs Tech,"
                       description="Join a team that values innovation, collaboration, and personal growth"
                       keywords="Careers,innovation, collaboration,"
                       url="https://www.pheonixstech.com/Careers"

@@ -133,7 +133,7 @@ const Insurance = () => {
 
       <SectionWrapper>
         <SuccessSnapshot
-          title="Success Snapshot:Shield Insurance Co."
+          title="Success Snapshot: National Insurance"
           subtitle="A leading insurance provider struggled to keep up with policyholder inquiries and claim-related confusion."
           solutionPoints={["Deployed automated claim triaging to route tickets faster", "Built an internal resource hub for complex insurance products", "Trained agents on compliance and customer empathy"]}
           resultPoints={[

@@ -7,9 +7,7 @@ const SiteLoader = () => {
   useEffect(() => {
 
 
-      setTimeout(() => {
-        setLoading(true);
-      }, 5000); // Adjust the delay herec
+
     
     if (document.readyState === 'complete') {
       setLoading(false);
@@ -23,9 +21,9 @@ const SiteLoader = () => {
   if (!loading) return null;
 
   return (
-    <div className={`fixed inset-0 bg-grey-400 flex flex-col justify-center items-center transition-opacity duration-500 ${loading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed inset-0 shadow-black shadow-lg bg-grey-400 flex flex-col justify-center items-center transition-opacity duration-500 ${loading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <img src="/logo.png" alt="logo" className="h-[200px] w-[200px]" />
-      <p className="text-Primarycolor text-sm font-light mt-2">PHOENIXS TECH</p>
+      <p className="text-Primarycolor text-2xl font-light">PHOENIXS TECH</p>
     </div>
   );
 };

@@ -102,7 +102,7 @@ const ContactSection = () => {
 
                 <div>
                   <p className="font-bold">Email</p>
-                  <p className="text-Primarycolor">info@pheonixstech.com</p>
+                  <p className="text-Primarycolor">info@phoenixstech.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -113,7 +113,7 @@ const ContactSection = () => {
 
                 <div>
                   <p className="font-bold">Phone Number</p>
-                  <p className="text-Primarycolor">info@pheonixstech.com</p>
+                  <p className="text-Primarycolor">+48579235919</p>
                 </div>
               </div>
 

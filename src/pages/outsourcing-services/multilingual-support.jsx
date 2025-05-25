@@ -27,7 +27,7 @@ function  MultilingualSupport
       icon: <FaGlobeAmericas className="text-Primarycolor text-3xl" />,
       title: "Global Customer Reach",
       description: "Expand your support to customers across regions and time zones.",
-      features: ["Multiregional coverage", "Seamless onboarding", "Scalable support options"],
+      features: ["Multi-regional coverage", "Seamless onboarding", "Scalable support options"],
     },
     {
       icon: <BiTransfer className="text-Primarycolor text-3xl" />,

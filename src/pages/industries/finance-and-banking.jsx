@@ -135,13 +135,13 @@ const supportServices = [
 
       <SectionWrapper>
         <SuccessSnapshot
-          title="Success Snapshot: CapitalEdge Bank"
+          title="Success Snapshot:Global Bank"
           subtitle="A regional bank was facing rising support calls and inconsistent answers during digital migration."
           solutionPoints={["Introduced secure chat for digital banking queries", "Consolidated product knowledge for frontline agents","Delivered training focused on digital fluency and compliance"]}
           resultPoints={[
-            { value: "42", label: "Reduction in response time" },
-            { value: "38", label: "Increase in customer satisfaction" },
-            { value: "27", label: "Growth in repeat purchases" },
+            { value: "43%", label: "Reduction in response time" },
+            { value: "31%", label: "Increase in customer satisfaction" },
+            { value: "25%", label: "Growth in repeat purchases" },
           ]}
 
           imageUrl={Industries06}

@@ -139,8 +139,8 @@ const Ecommerce = () => {
           solutionPoints={["Implemented a flexible multilingual support team that could scale rapidly during peak seasons", "Developed specialized training for handling fashion-specific inquiries", "Created a unified knowledge base to ensure consistent responses across all channels"]}
           resultPoints={[
             { value: "42%", label: "Reduction in response time" },
-            { value: "38%", label: "Increase in customer satisfaction" },
-            { value: "27%", label: "Growth in repeat purchases" },
+            { value: "35%", label: "Increase in customer satisfaction" },
+            { value: "20%", label: "Growth in repeat purchases" },
           ]}
           imageUrl={Industries02}
         />
