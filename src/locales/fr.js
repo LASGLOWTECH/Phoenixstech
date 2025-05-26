@@ -144,6 +144,77 @@ const fr = {
   "Follow us": "Suivez-nous",
   "Terms & Conditions": "Conditions générales",
   "Privacy Policy": "Politique de confidentialité",
-  "Colorful Gradient Decoration": "Décoration dégradée colorée"
+  "Colorful Gradient Decoration": "Décoration dégradée colorée",
+
+  // about us
+  
+  "About Us": "À propos de nous",
+  "Driven by People, Powered by": "Porté par les gens, propulsé par",
+  "Purpose and": "Objectif et",
+  "Innovation": "Innovation",
+  
+  "Our Story": "Notre histoire",
+  "Founded": "Fondée",
+  "Launched with a vision to transform customer support.": "Lancée avec la vision de transformer le support client.",
+  "First Major Client": "Premier grand client",
+  "Secured our first global enterprise partnership.": "Partenariat avec notre première entreprise mondiale.",
+  "Expanded Services": "Services élargis",
+  "Introduced multilingual and technical support offerings.": "Introduction de services multilingues et de support technique.",
+  "Global Reach": "Portée mondiale",
+  "Now serving clients worldwide.": "Nous servons désormais des clients dans le monde entier.",
+  "We started with a simple goal: to help businesses create better connections with their customers. Over time, that vision grew into a global mission—offering multilingual support and tailored service experiences across industries. What began as a small, passionate team has grown into a network of professionals dedicated to delivering excellence every day. From voice support to live chat, technical help, and beyond, we focus on people, technology, and results. Our journey is powered by trust, built on expertise, and driven by the belief that every interaction matters.": "Nous avons commencé avec un objectif simple : aider les entreprises à créer de meilleures connexions avec leurs clients. Au fil du temps, cette vision est devenue une mission mondiale — offrir un support multilingue et des expériences de service personnalisées dans tous les secteurs. Ce qui a commencé comme une petite équipe passionnée est devenu un réseau de professionnels engagés à fournir l'excellence au quotidien. Du support vocal au chat en direct, à l'assistance technique et plus encore, nous nous concentrons sur les personnes, la technologie et les résultats. Notre parcours est alimenté par la confiance, construit sur l'expertise, et guidé par la conviction que chaque interaction compte.",
+// VALUES
+  "Values": "Valeurs",
+  "Built on Values That Drive Results": "Fondé sur des valeurs qui produisent des résultats",
+  "Client-Centered Approach": "Approche centrée sur le client",
+  "We tailor every solution to fit your unique needs and long-term goals.": "Nous adaptons chaque solution à vos besoins uniques et à vos objectifs à long terme.",
+  "Consistent Quality": "Qualité constante",
+  "Reliable, high-standard service delivery—every time, across all project touchpoints.": "Prestation fiable et de haute qualité — à chaque fois, sur tous les points de contact du projet.",
+  "Lasting Partnerships": "Partenariats durables",
+  "We focus on building strong, lasting relationships, not just completing tasks.": "Nous nous concentrons sur la création de relations solides et durables, pas seulement sur l’exécution de tâches.",
+  "Diverse Team": "Équipe diversifiée",
+
+// meet the team
+
+  "Our Team": "Notre Équipe",
+  "Meet the Experts": "Rencontrez les Experts",
+  "Behind Our Success": "Derrière Notre Succès",
+  "Our diverse team of professionals brings a wealth of knowledge and experience to every project, working together to create impactful solutions for your business.": "Notre équipe diversifiée de professionnels apporte une richesse de connaissances et d'expérience à chaque projet, travaillant ensemble pour créer des solutions percutantes pour votre entreprise.",
+  "Chief Executive Officer (CEO)": "Directeur Général (CEO)",
+  "Chief Operations Officer (COO)": "Directeur des Opérations (COO)",
+  "Head of Customer Success": "Responsable de la Réussite Client",
+  "Chief Technology Officer (CTO)": "Directeur Technique (CTO)",
+  "A visionary leader focused on driving growth and innovation, ensuring the company stays ahead of trends and consistently delivers value.": "Un leader visionnaire axé sur la croissance et l'innovation, garantissant que l'entreprise reste à la pointe des tendances et délivre constamment de la valeur.",
+  "Responsible for streamlining processes and overseeing daily operations, optimizing services, and expanding the client base.": "Responsable de la rationalisation des processus et de la supervision des opérations quotidiennes, optimisant les services et élargissant la base de clients.",
+  "Leads the customer success team, building strong relationships and ensuring high client retention through exceptional service.": "Dirige l'équipe de réussite client, construit des relations solides et assure une fidélisation élevée grâce à un service exceptionnel.",
+  "The technical expert who ensures the delivery of cutting-edge solutions, leveraging expertise in software development and IT infrastructure.": "L'expert technique qui garantit la fourniture de solutions de pointe, exploitant son expertise en développement logiciel et infrastructure informatique.",
+// tesimonails
+
+  "See What Our": "Découvrez ce que nos",
+  "Clients": "clients",
+  "Are Saying": "disent",
+  "Testimonials": "Témoignages",
+
+  "Sarah Thompson": "Sarah Thompson",
+  "Head of Customer Relations, FinTech Solutions": "Responsable des relations clients, FinTech Solutions",
+  "The team exceeded our expectations, delivering exceptional support that helped us scale our customer service operations globally. Their professionalism and expertise are unmatched.": "L'équipe a dépassé nos attentes en offrant un soutien exceptionnel qui nous a aidés à étendre nos opérations de service client à l'échelle mondiale. Leur professionnalisme et leur expertise sont inégalés.",
+
+  "Daniel Brooks": "Daniel Brooks",
+  "CX Manager, TechPulse": "Responsable CX, TechPulse",
+  "Amazing experience! Their customer service solutions helped us streamline our workflow and build better customer trust.": "Expérience incroyable ! Leurs solutions de service client nous ont aidés à rationaliser notre flux de travail et à renforcer la confiance des clients.",
+
+  "Linda Ray": "Linda Ray",
+  "Operations Lead, SoftCom": "Responsable des opérations, SoftCom",
+  "Highly professional and always on time. A truly multilingual support team with outstanding results.": "Très professionnel et toujours ponctuel. Une équipe de support véritablement multilingue avec des résultats exceptionnels.",
+
+// join us
+
+  "Join Our Team and Build the Future": "Rejoignez notre équipe et construisez l'avenir",
+  "We offer a dynamic environment where your ideas are valued and your career can thrive. Join a team of passionate professionals dedicated to delivering exceptional results.": "Nous offrons un environnement dynamique où vos idées sont valorisées et votre carrière peut s'épanouir. Rejoignez une équipe de professionnels passionnés, dédiée à fournir des résultats exceptionnels.",
+  "Explore Careers": "Découvrez nos offres d'emploi"
+
+
+
+
 }
 export default fr;

@@ -152,7 +152,77 @@ const pl= {
   "Follow us": "Obserwuj nas",
   "Terms & Conditions": "Regulamin",
   "Privacy Policy": "Polityka prywatności",
-  "Colorful Gradient Decoration": "Kolorowa dekoracja gradientowa"
+  "Colorful Gradient Decoration": "Kolorowa dekoracja gradientowa",
+  // about us
+  
+  "About Us": "O nas",
+  "Driven by People, Powered by": "Napędzani przez ludzi, wspierani przez",
+  "Purpose and": "Cel i",
+  "Innovation": "Innowacja",
+
+  "Our Story": "Nasza historia",
+  "Founded": "Założona",
+  "Launched with a vision to transform customer support.": "Rozpoczęto z wizją przekształcenia obsługi klienta.",
+  "First Major Client": "Pierwszy duży klient",
+  "Secured our first global enterprise partnership.": "Nawiązaliśmy pierwsze globalne partnerstwo.",
+  "Expanded Services": "Rozszerzone usługi",
+  "Introduced multilingual and technical support offerings.": "Wprowadzono wsparcie wielojęzyczne i techniczne.",
+  "Global Reach": "Zasięg globalny",
+  "Now serving clients worldwide.": "Obsługujemy klientów na całym świecie.",
+  "We started with a simple goal: to help businesses create better connections with their customers. Over time, that vision grew into a global mission—offering multilingual support and tailored service experiences across industries. What began as a small, passionate team has grown into a network of professionals dedicated to delivering excellence every day. From voice support to live chat, technical help, and beyond, we focus on people, technology, and results. Our journey is powered by trust, built on expertise, and driven by the belief that every interaction matters.": "Zaczęliśmy z prostym celem: pomóc firmom nawiązywać lepsze relacje z klientami. Z czasem ta wizja przerodziła się w globalną misję — oferowanie wielojęzycznego wsparcia i spersonalizowanych doświadczeń usługowych w różnych branżach. To, co zaczęło się jako mały, pełen pasji zespół, przekształciło się w sieć profesjonalistów dostarczających doskonałość każdego dnia. Od wsparcia głosowego po czat na żywo, pomoc techniczną i więcej — koncentrujemy się na ludziach, technologii i wynikach. Nasza podróż opiera się na zaufaniu, zbudowana jest na wiedzy fachowej i napędzana przekonaniem, że każda interakcja ma znaczenie.",
+
+
+  "Values": "Wartości",
+  "Built on Values That Drive Results": "Oparte na wartościach, które przynoszą rezultaty",
+  "Client-Centered Approach": "Podejście zorientowane na klienta",
+  "We tailor every solution to fit your unique needs and long-term goals.": "Dostosowujemy każde rozwiązanie do Twoich unikalnych potrzeb i długoterminowych celów.",
+  "Consistent Quality": "Spójna jakość",
+  "Reliable, high-standard service delivery—every time, across all project touchpoints.": "Niezawodna, wysokiej jakości obsługa — za każdym razem, na każdym etapie projektu.",
+  "Lasting Partnerships": "Trwałe partnerstwa",
+  "We focus on building strong, lasting relationships, not just completing tasks.": "Skupiamy się na budowaniu silnych, trwałych relacji, a nie tylko na realizacji zadań.",
+  "Diverse Team": "Zróżnicowany zespół",
+
+
+  "Our Team": "Nasz Zespół",
+  "Meet the Experts": "Poznaj Ekspertów",
+  "Behind Our Success": "Za Naszym Sukcesem",
+  "Our diverse team of professionals brings a wealth of knowledge and experience to every project, working together to create impactful solutions for your business.": "Nasz różnorodny zespół profesjonalistów wnosi bogactwo wiedzy i doświadczenia do każdego projektu, współpracując, aby tworzyć efektywne rozwiązania dla Twojej firmy.",
+  "Chief Executive Officer (CEO)": "Dyrektor Generalny (CEO)",
+  "Chief Operations Officer (COO)": "Dyrektor Operacyjny (COO)",
+  "Head of Customer Success": "Szef Zespołu Obsługi Klienta",
+  "Chief Technology Officer (CTO)": "Dyrektor Techniczny (CTO)",
+  "A visionary leader focused on driving growth and innovation, ensuring the company stays ahead of trends and consistently delivers value.": "Wizjonerski lider skupiony na wzroście i innowacjach, zapewniający, że firma wyprzedza trendy i konsekwentnie dostarcza wartość.",
+  "Responsible for streamlining processes and overseeing daily operations, optimizing services, and expanding the client base.": "Odpowiedzialny za usprawnianie procesów i nadzór nad codziennymi operacjami, optymalizację usług oraz rozwój bazy klientów.",
+  "Leads the customer success team, building strong relationships and ensuring high client retention through exceptional service.": "Prowadzi zespół ds. sukcesu klienta, budując silne relacje i zapewniając wysoką retencję klientów dzięki wyjątkowej obsłudze.",
+  "The technical expert who ensures the delivery of cutting-edge solutions, leveraging expertise in software development and IT infrastructure.": "Ekspert techniczny, który zapewnia dostarczanie nowoczesnych rozwiązań, wykorzystując wiedzę z zakresu rozwoju oprogramowania i infrastruktury IT.",
+// testimonials
+
+  "See What Our": "Zobacz, co nasi",
+  "Clients": "klienci",
+  "Are Saying": "mówią",
+  "Testimonials": "Referencje",
+
+  "Sarah Thompson": "Sarah Thompson",
+  "Head of Customer Relations, FinTech Solutions": "Kierownik ds. relacji z klientami, FinTech Solutions",
+  "The team exceeded our expectations, delivering exceptional support that helped us scale our customer service operations globally. Their professionalism and expertise are unmatched.": "Zespół przewyższył nasze oczekiwania, zapewniając wyjątkowe wsparcie, które pomogło nam rozwinąć obsługę klienta na całym świecie. Ich profesjonalizm i doświadczenie są niezrównane.",
+
+  "Daniel Brooks": "Daniel Brooks",
+  "CX Manager, TechPulse": "Kierownik CX, TechPulse",
+  "Amazing experience! Their customer service solutions helped us streamline our workflow and build better customer trust.": "Niesamowite doświadczenie! Ich rozwiązania obsługi klienta pomogły nam usprawnić przepływ pracy i zbudować większe zaufanie klientów.",
+
+  "Linda Ray": "Linda Ray",
+  "Operations Lead, SoftCom": "Kierownik operacyjny, SoftCom",
+  "Highly professional and always on time. A truly multilingual support team with outstanding results.": "Bardzo profesjonalni i zawsze na czas. Naprawdę wielojęzyczny zespół wsparcia z doskonałymi wynikami.",
+// join us
+
+  "Join Our Team and Build the Future": "Join Our Team and Build the Future",
+  "We offer a dynamic environment where your ideas are valued and your career can thrive. Join a team of passionate professionals dedicated to delivering exceptional results.": "We offer a dynamic environment where your ideas are valued and your career can thrive. Join a team of passionate professionals dedicated to delivering exceptional results.",
+  "Explore Careers": "Explore Careers"
+
+
+
+
+
 
 };
 export default pl;

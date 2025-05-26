@@ -1,27 +1,42 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 const OurStorySection = () => {
-  const timelineData = [
-    { year: '2018', event: 'Founded', description: 'Launched with a vision to transform customer support.' },
-    { year: '2019', event: 'First Major Client', description: 'Secured our first global enterprise partnership.' },
-    { year: '2021', event: 'Expanded Services', description: 'Introduced multilingual and technical support offerings.' },
-    { year: '2023', event: 'Global Reach', description: 'Now serving clients worldwide.' },
+   const { t } = useTranslation();
+ const timelineData = [
+    {
+      year: '2018',
+      event: t('Founded'),
+      description: t('Launched with a vision to transform customer support.')
+    },
+    {
+      year: '2019',
+      event: t('First Major Client'),
+      description: t('Secured our first global enterprise partnership.')
+    },
+    {
+      year: '2021',
+      event: t('Expanded Services'),
+      description: t('Introduced multilingual and technical support offerings.')
+    },
+    {
+      year: '2023',
+      event: t('Global Reach'),
+      description: t('Now serving clients worldwide.')
+    }
   ];
 
   return (
     <section className="py-16 px-6  md:px-20 bg-white text-center">
       <div className="">
         {/* Title */}
-        <h2 className="text-4xl font-semibold text-gray-800 mb-6">Our Story</h2>
+        <h2 className="text-4xl font-semibold text-gray-800 mb-6">  {t('Our Story')}</h2>
 
         {/* Introduction Paragraph */}
         <div className="md:max-w-5xl mx-auto text-gray-600 leading-relaxed mb-10">
           <p className="mb-2 text-base ">
-            We started with a simple goal: to help businesses create better connections with their customers. Over time, that vision grew into a global mission—offering multilingual support and tailored service experiences across industries.
-  What began as a small, passionate team has grown into a network of professionals dedicated to delivering excellence every day.
-         From voice support to live chat, technical help, and beyond, we focus on people, technology, and results.
-          
-            Our journey is powered by trust, built on expertise, and driven by the belief that every interaction matters.
+      {t(
+              'We started with a simple goal: to help businesses create better connections with their customers. Over time, that vision grew into a global mission—offering multilingual support and tailored service experiences across industries. What began as a small, passionate team has grown into a network of professionals dedicated to delivering excellence every day. From voice support to live chat, technical help, and beyond, we focus on people, technology, and results. Our journey is powered by trust, built on expertise, and driven by the belief that every interaction matters.'
+            )}
           </p>
         </div>
 

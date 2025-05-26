@@ -4,10 +4,12 @@ import { Lady1 } from "../components/images";
 import { Woman1, Woman2 } from "../components/images";
 import { Line } from "../components/images";
 
+
 import ValuesAndTeamSection from "../components/ValuesAndTeam";
 import MeetTeam from "../components/sections/MeetTheteam";
 import TestimonialSection from "../components/TestimonialSection";
 import JoinUs from "../components/Joinus";
+import { useTranslation } from "react-i18next";
 import SEO from "../utils/seo";
 const generateMotionVariants = (index) => ({
   animate: {
@@ -35,6 +37,7 @@ const calculateOpacity = (xPosition, screenWidth) => {
 };
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   const images = [Lady1,Woman1,Woman2, Lady1, Woman2];
 
   return (
@@ -56,25 +59,24 @@ const AboutUs = () => {
   
       />
 
-
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 8, ease: "ease" }}
-      >
-        <div className="flex mb-2 items-center justify-center flex-row ">
-          <div className="rounded-full bg-gradient-to-r from-Secondarycolor to-Secondarycolor1  w-[10px] h-[10px]  mr-2"></div>
-          <p className="text-sm text-orange-500 ">About Us</p>
-        </div>
-        <h2 className="text-3xl md:text-5xl pb-12 px-6 font-bold">
-          Driven by People, Powered by
-          <span className="hidden md:inline"><br /></span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1">
-            Purpose<span className="text-greyBlack"> and </span> Innovation
-          </span>
-        </h2>
-
-      </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 8, ease: "ease" }}
+>
+  <div className="flex mb-2 items-center justify-center flex-row ">
+    <div className="rounded-full bg-gradient-to-r from-Secondarycolor to-Secondarycolor1 w-[10px] h-[10px] mr-2"></div>
+    <p className="text-sm text-orange-500">{t('About Us')}</p>
+  </div>
+  
+  <h2 className="text-3xl md:text-5xl pb-12 px-6 font-bold">
+    {t('Driven by People, Powered by')}
+    <span className="hidden md:inline"><br /></span>
+    <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1">
+      {t('Purpose')}<span className="text-greyBlack"> {t('and')} </span>{t('Innovation')}
+    </span>
+  </h2>
+</motion.div>
 
       <div className="relative grid grid-cols-2  md:grid-cols-8  gap-5 h-52 mt-12 w-full overflow-hidden">
         {images.map((src, index) => (
