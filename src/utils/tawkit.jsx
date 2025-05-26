@@ -9,7 +9,7 @@ const TawkToWidget = () => {
       window.Tawk_LoadStart = new Date();
 
       const script = document.createElement("script");
-      script.src = "https://embed.tawk.to/680f7035d22d79190b3eb4be/1ipu4skuh";
+      script.src = "https://embed.tawk.to/6834507a127764190ca8acce/1is65kp0c";
       script.async = true;
       script.charset = "UTF-8";
       script.setAttribute("crossorigin", "*");
