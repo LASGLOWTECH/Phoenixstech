@@ -142,7 +142,40 @@ const en = {
 
   "Linda Ray": "Linda Ray",
   "Operations Lead, SoftCom": "Responsable des opérations, SoftCom",
-  "Highly professional and always on time. A truly multilingual support team with outstanding results.": "Très professionnel et toujours ponctuel. Une équipe de support vraiment multilingue avec des résultats exceptionnels."
+  "Highly professional and always on time. A truly multilingual support team with outstanding results.": "Très professionnel et toujours ponctuel. Une équipe de support vraiment multilingue avec des résultats exceptionnels.",
+
+
+  // careers
+  "Grow Your Career with Phoenixs Tech": "Grow Your Career with Phoenixs Tech",
+  "Join a team that values innovation, collaboration, and personal growth": "Join a team that values innovation, collaboration, and personal growth",
+  "Careers,innovation, collaboration": "Careers,innovation, collaboration",
+  "Embark on a Rewarding": "Embark on a Rewarding",
+  "Career": "Career",
+  "with Us and Make a Difference": "with Us and Make a Difference",
+  "Join a team that values innovation, collaboration, and personal growth. Explore opportunities to grow your career while making a real impact.": "Join a team that values innovation, collaboration, and personal growth. Explore opportunities to grow your career while making a real impact.",
+  "300+ Talents": "300+ Talents",
+  "Career Hero": "Career Hero",
+
+
+  "Grow Your Career with Phoenixs Tech": "Grow Your Career with Phoenixs Tech",
+  "At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you're looking to enhance your skills, take on new challenges, or make a meaningful impact, you'll find a place to thrive with us.": "At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you're looking to enhance your skills, take on new challenges, or make a meaningful impact, you'll find a place to thrive with us.",
+  "Career Development": "Career Development",
+  "Investing in your growth through training and mentorship.": "Investing in your growth through training and mentorship.",
+  "Collaborative Environment": "Collaborative Environment",
+  "Work with passionate, innovative professionals.": "Work with passionate, innovative professionals.",
+  "Innovative Projects": "Innovative Projects",
+  "Be part of challenging, boundary-pushing projects.": "Be part of challenging, boundary-pushing projects.",
+  "Work-Life Balance": "Work-Life Balance",
+  "Enjoy flexible schedules and remote work options.": "Enjoy flexible schedules and remote work options."
+,
+// career contact
+
+  "Have any questions?": "Have any questions?",
+  "We're here to help! Reach out to us with any inquiries or concerns, and our team will provide the answers you need. Feel free to get in touch—we’d love to assist you!": "We're here to help! Reach out to us with any inquiries or concerns, and our team will provide the answers you need. Feel free to get in touch—we’d love to assist you!",
+  "Follow us": "Follow us",
+  "Contact Us": "Contact Us"
+
+
 
 
 };

@@ -11,11 +11,6 @@ import { Image2, Line } from '../components/images';
 
 const Blogs = () => {
 
-
-
-  
-
-
   const [posts, setPosts] = useState([]);
   const fetchDta = async () => {
     try {
@@ -99,7 +94,7 @@ const Blogs = () => {
             Have questions or ready to start a project? Our team is here to assist you.
           </p>
 
-          <Link to={"/blog/2"} className="inline-block">
+          <Link to={"/blog/1"} className="inline-block">
        
             <button
               className="bg-gradient-to-r from-Primarycolor to-Primarycolor1 hover:from-Secondarycolor hover:to-Secondarycolor1 shadow-md text-white font-semibold py-3 px-5  mt-3 rounded-md transition-all duration-300"

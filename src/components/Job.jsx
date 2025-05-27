@@ -1,108 +1,67 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { PiArrowCircleUpRightFill } from "react-icons/pi";
-import { PiArrowCircleRightFill } from "react-icons/pi";
+import { PiArrowCircleUpRightFill, PiArrowCircleRightFill } from "react-icons/pi";
+import instance from '../config/axios.config';
+import moment from 'moment';
 
+const CareerCard = ({ title, description, url, location, date }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-// Mock API function
-const fetchCareers = async () => {
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  return [
-    {
-      id: 1,
-      title: 'Customer Support Specialist',
-      description:
-        'Assist customers by resolving inquiries, providing product information, and ensuring a seamless customer experience.',
-    },
-    {
-      id: 2,
-      title: 'Software Developer',
-      description:
-        'Develop and implement custom software solutions. Collaborate with cross-functional teams to create innovative products.',
-    },
-    {
-      id: 3,
-      title: 'Marketing Manager',
-      description:
-        'Create and execute strategic marketing campaigns to enhance brand awareness and increase sales.',
-    },
-    {
-      id: 4,
-      title: 'Technical Support Engineer',
-      description:
-        'Troubleshoot and resolve software and hardware issues. Assist clients in optimizing their systems.',
-    },
-    {
-      id: 5,
-      title: 'Project Manager',
-      description:
-        'Manage projects from inception to completion. Ensure timely delivery, quality control, and client satisfaction.',
-    },
-    {
-      id: 6,
-      title: 'Data Analyst',
-      description:
-        'Analyze and interpret complex data. Provide insights through reports and visualizations.',
-    },
-    {
-      id: 7,
-      title: 'UX/UI Designer',
-      description:
-        'Design user-friendly interfaces and improve usability. Work with developers to implement your designs.',
-    },
-    {
-      id: 8,
-      title: 'Sales Executive',
-      description:
-        'Identify and develop business opportunities, nurture relationships, and achieve sales targets.',
-    },
-  ];
-};
+  return (
+    <div
+      className="bg-white rounded-2xl shadow-md p-6 space-y-4 border border-gray-200 transition-transform hover:shadow-lg"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+      <p className="text-gray-600 text-sm line-clamp-3" dangerouslySetInnerHTML={{ __html: description }} />
 
-const CareerCard = ({ title, description }) => {
-    const [isHovered, setIsHovered] = useState(false);
-  
-    return (
-      <div
-        className="bg-white rounded-lg shadow-md p-6 space-y-4  "
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-        <p className="text-gray-600">{description}</p>
-        <div className="flex items-center pt-6 group cursor-pointer transition-all duration-500">
+      <div className="text-sm text-gray-500 pt-2">
+        <p><strong>Location:</strong> {location || 'Remote'}</p>
+        <p><strong>Date:</strong> {moment(date).format('MMM DD, YYYY')}</p>
+      </div>
+
+      <div className="flex items-center pt-4 group cursor-pointer transition-all duration-500">
         <span className="transition-transform duration-500 ease-in-out">
           {isHovered ? (
-            <  PiArrowCircleRightFill    className="w-8 h-8  fill-Secondarycolor " />
+            <PiArrowCircleRightFill className="w-8 h-8 fill-Secondarycolor" />
           ) : (
             <PiArrowCircleUpRightFill className="w-8 h-8 fill-Primarycolor" />
           )}
         </span>
         <a
-          href="#"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`ml-2 font-medium transition-all duration-500 ${
             isHovered
               ? 'text-transparent bg-clip-text bg-gradient-to-r from-Secondarycolor to-Secondarycolor1'
-              : 'text-white'
+              : 'text-Primarycolor'
           }`}
         >
-          Learn More
+          Apply Now
         </a>
       </div>
-      </div>
-    );
-  };
-  
+    </div>
+  );
+};
 
 const CareerContent = () => {
-  const [careers, setCareers] = useState([]);
+  const [allJobs, setAllJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [page, setPage] = useState(1);
+
+  // Number of jobs per page
+  const jobsPerPage = 12;
 
   useEffect(() => {
-    const getCareers = async () => {
+    const fetchJobs = async () => {
+      setLoading(true);
       try {
-        const data = await fetchCareers();
-        setCareers(data);
+        // Fetch all jobs without limit (or a very high limit depending on API)
+        // Adjust endpoint if needed
+        const res = await instance.get(`/jobs?limit=1000`);
+        setAllJobs(res.data.jobs || []);
       } catch (err) {
         setError('Failed to fetch career opportunities.');
       } finally {
@@ -110,8 +69,14 @@ const CareerContent = () => {
       }
     };
 
-    getCareers();
+    fetchJobs();
   }, []);
+
+  // Calculate total pages
+  const totalPages = Math.ceil(allJobs.length / jobsPerPage);
+
+  // Get jobs for current page
+  const currentJobs = allJobs.slice((page - 1) * jobsPerPage, page * jobsPerPage);
 
   if (loading) {
     return <div className="text-center py-16 text-blue-500">Loading career opportunities...</div>;
@@ -122,20 +87,40 @@ const CareerContent = () => {
   }
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-8">
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl sm:text-4xl  font-semibold text-gray-900 tracking-tight">
-            Explore Career Opportunities with <span className="bg-clip-text text-transparent bg-gradient-to-b from-Secondarycolor to-Secondarycolor1"><br></br>Phoenixs Tech</span>
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-8">
-          {careers.map(career => (
-            <CareerCard key={career.id} title={career.title} description={career.description} />
-          ))}
-        </div>
+    <>
+      {/* Career Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {currentJobs.map((career) => (
+          <CareerCard
+            key={career.id}
+            title={career.title}
+            description={career.description}
+            url={career.url}
+            location={career.candidate_required_location}
+            date={career.publication_date}
+          />
+        ))}
       </div>
-    </div>
+
+      {/* Pagination Controls */}
+      <div className="mt-8 py-5 flex justify-center items-center space-x-4">
+        <button
+          onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+          disabled={page === 1}
+          className="px-4 py-2 bg-Primarycolor text-white rounded disabled:opacity-50"
+        >
+          Previous
+        </button>
+        <span className="text-gray-600 text-sm">Page {page} of {totalPages}</span>
+        <button
+          onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+          disabled={page === totalPages}
+          className="px-4 py-2 bg-Primarycolor text-white rounded disabled:opacity-50"
+        >
+          Next
+        </button>
+      </div>
+    </>
   );
 };
 

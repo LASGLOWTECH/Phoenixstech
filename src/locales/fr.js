@@ -211,8 +211,38 @@ const fr = {
 
   "Join Our Team and Build the Future": "Rejoignez notre équipe et construisez l'avenir",
   "We offer a dynamic environment where your ideas are valued and your career can thrive. Join a team of passionate professionals dedicated to delivering exceptional results.": "Nous offrons un environnement dynamique où vos idées sont valorisées et votre carrière peut s'épanouir. Rejoignez une équipe de professionnels passionnés, dédiée à fournir des résultats exceptionnels.",
-  "Explore Careers": "Découvrez nos offres d'emploi"
+  "Explore Careers": "Découvrez nos offres d'emploi",
 
+// careers
+
+  "Grow Your Career with Phoenixs Tech": "Faites évoluer votre carrière avec Phoenixs Tech",
+  "Join a team that values innovation, collaboration, and personal growth": "Rejoignez une équipe qui valorise l'innovation, la collaboration et l'épanouissement personnel",
+  "Careers,innovation, collaboration": "Carrières, innovation, collaboration",
+  "Embark on a Rewarding": "Entamez une",
+  "Career": "carrière enrichissante",
+  "with Us and Make a Difference": "avec nous et faites la différence",
+  "Join a team that values innovation, collaboration, and personal growth. Explore opportunities to grow your career while making a real impact.": "Rejoignez une équipe qui valorise l'innovation, la collaboration et l'épanouissement personnel. Explorez des opportunités pour développer votre carrière tout en ayant un réel impact.",
+  "300+ Talents": "300+ Talents",
+  "Career Hero": "Image de carrière",
+
+  
+  "Grow Your Career with Phoenixs Tech": "Développez votre carrière avec Phoenixs Tech",
+  "At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you're looking to enhance your skills, take on new challenges, or make a meaningful impact, you'll find a place to thrive with us.": "Chez Phoenixs Tech, nous croyons en la valorisation des talents et offrons des opportunités infinies de croissance. Que vous souhaitiez améliorer vos compétences, relever de nouveaux défis ou avoir un impact significatif, vous trouverez votre place chez nous.",
+  "Career Development": "Développement de carrière",
+  "Investing in your growth through training and mentorship.": "Investir dans votre croissance grâce à la formation et au mentorat.",
+  "Collaborative Environment": "Environnement collaboratif",
+  "Work with passionate, innovative professionals.": "Travaillez avec des professionnels passionnés et innovants.",
+  "Innovative Projects": "Projets innovants",
+  "Be part of challenging, boundary-pushing projects.": "Participez à des projets stimulants et innovants.",
+  "Work-Life Balance": "Équilibre vie professionnelle/vie privée",
+  "Enjoy flexible schedules and remote work options.": "Profitez d'horaires flexibles et du travail à distance."
+,
+// carrer contact
+
+  "Have any questions?": "Des questions ?",
+  "We're here to help! Reach out to us with any inquiries or concerns, and our team will provide the answers you need. Feel free to get in touch—we’d love to assist you!": "Nous sommes là pour vous aider ! Contactez-nous pour toute question ou préoccupation, et notre équipe vous fournira les réponses dont vous avez besoin. N'hésitez pas à nous joindre — nous serions ravis de vous assister !",
+  "Follow us": "Suivez-nous",
+  "Contact Us": "Contactez-nous"
 
 
 

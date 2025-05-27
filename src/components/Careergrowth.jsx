@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBolt, FaUsers, FaChartLine, FaBriefcase } from 'react-icons/fa';
-
+import { useTranslation } from 'react-i18next';
 
 const iconVariants = {
     initial: { y: 0 },
@@ -13,17 +13,16 @@ const iconVariants = {
 };
 
 const CareerGrowth = () => {
+    const { t } = useTranslation();
     return (
         <div className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto text-center space-y-8">
                 <div className="space-y-4">
                     <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 tracking-tight">
-                        Grow Your Career with Phoenixs Tech
+                        {t("Grow Your Career with Phoenixs Tech")}
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities
-                        for growth. Whether you&apos;re looking to enhance your skills, take on new challenges, or
-                        make a meaningful impact, you&apos;ll find a place to thrive with us.
+                        {t("At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you&apos;re looking to enhance your skills, take on new challenges, or")} {t("make a meaningful impact, you&apos;ll find a place to thrive with us.")}
                     </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-8">
@@ -38,9 +37,9 @@ const CareerGrowth = () => {
                         >
                             <FaBolt className='fill-Primarycolor' size={40} />
                         </motion.div>
-                        <h3 className="text-xl font-semibold text-gray-900">Career Development</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">{t("Career Development")}</h3>
                         <p className="text-gray-600">
-                            Investing in your growth through training and mentorship.
+                            {t("Investing in your growth through training and mentorship.")}
                         </p>
                     </div>
 
@@ -55,9 +54,9 @@ const CareerGrowth = () => {
                         >
                             <FaUsers className='fill-Primarycolor' size={40} />
                         </motion.div>
-                        <h3 className="text-xl font-semibold text-gray-900">Collaborative Environment</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">{t("Collaborative Environment")}</h3>
                         <p className="text-gray-600">
-                            Work with passionate, innovative professionals.
+                            {t("Work with passionate, innovative professionals.")}
                         </p>
                     </div>
 
@@ -72,9 +71,9 @@ const CareerGrowth = () => {
                         >
                             <FaChartLine className='fill-Primarycolor' size={40} />
                         </motion.div>
-                        <h3 className="text-xl font-semibold text-gray-900">Innovative Projects</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">{t("Innovative Projects")}</h3>
                         <p className="text-gray-600">
-                            Be part of challenging, boundary-pushing projects.
+                            {t("Be part of challenging, boundary-pushing projects.")}
                         </p>
                     </div>
 
@@ -89,9 +88,9 @@ const CareerGrowth = () => {
                         >
                             <FaBriefcase className='fill-Primarycolor' size={40} />
                         </motion.div>
-                        <h3 className="text-xl font-semibold text-gray-900">Work-Life Balance</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">{t("Work-Life Balance")}</h3>
                         <p className="text-gray-600">
-                            Enjoy flexible schedules and remote work options.
+                            {t("Enjoy flexible schedules and remote work options.")}
                         </p>
                     </div>
                 </div>

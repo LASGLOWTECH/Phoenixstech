@@ -217,9 +217,38 @@ const pl= {
 
   "Join Our Team and Build the Future": "Join Our Team and Build the Future",
   "We offer a dynamic environment where your ideas are valued and your career can thrive. Join a team of passionate professionals dedicated to delivering exceptional results.": "We offer a dynamic environment where your ideas are valued and your career can thrive. Join a team of passionate professionals dedicated to delivering exceptional results.",
-  "Explore Careers": "Explore Careers"
+  "Explore Careers": "Explore Careers",
+
+// Careere
+
+  "Grow Your Career with Phoenixs Tech": "Rozwijaj swoją karierę z Phoenixs Tech",
+  "Join a team that values innovation, collaboration, and personal growth": "Dołącz do zespołu, który ceni innowacyjność, współpracę i rozwój osobisty",
+  "Careers,innovation, collaboration": "Kariera, innowacja, współpraca",
+  "Embark on a Rewarding": "Rozpocznij satysfakcjonującą",
+  "Career": "karierę",
+  "with Us and Make a Difference": "z nami i zmieniaj świat",
+  "Join a team that values innovation, collaboration, and personal growth. Explore opportunities to grow your career while making a real impact.": "Dołącz do zespołu, który ceni innowacyjność, współpracę i rozwój osobisty. Odkrywaj możliwości rozwoju kariery i wywieraj realny wpływ.",
+  "300+ Talents": "Ponad 300 talentów",
+  "Career Hero": "Bohater kariery",
 
 
+  "Grow Your Career with Phoenixs Tech": "Rozwijaj swoją karierę z Phoenixs Tech",
+  "At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you're looking to enhance your skills, take on new challenges, or make a meaningful impact, you'll find a place to thrive with us.": "W Phoenixs Tech wierzymy w rozwijanie talentów i oferujemy nieograniczone możliwości rozwoju. Niezależnie od tego, czy chcesz poszerzać swoje umiejętności, podejmować nowe wyzwania, czy wywierać realny wpływ — znajdziesz u nas miejsce, w którym możesz się rozwijać.",
+  "Career Development": "Rozwój kariery",
+  "Investing in your growth through training and mentorship.": "Inwestujemy w Twój rozwój poprzez szkolenia i mentoring.",
+  "Collaborative Environment": "Środowisko współpracy",
+  "Work with passionate, innovative professionals.": "Pracuj z pasjonatami i innowacyjnymi specjalistami.",
+  "Innovative Projects": "Innowacyjne projekty",
+  "Be part of challenging, boundary-pushing projects.": "Bierz udział w wymagających i przełomowych projektach.",
+  "Work-Life Balance": "Równowaga między pracą a życiem prywatnym",
+  "Enjoy flexible schedules and remote work options.": "Korzystaj z elastycznych godzin pracy i możliwości pracy zdalnej."
+
+// career contact
+  ,
+  "Have any questions?": "Masz jakieś pytania?",
+  "We're here to help! Reach out to us with any inquiries or concerns, and our team will provide the answers you need. Feel free to get in touch—we’d love to assist you!": "Jesteśmy tutaj, aby pomóc! Skontaktuj się z nami w przypadku jakichkolwiek pytań lub wątpliwości, a nasz zespół udzieli Ci potrzebnych odpowiedzi. Skontaktuj się z nami — chętnie Ci pomożemy!",
+  "Follow us": "Obserwuj nas",
+  "Contact Us": "Skontaktuj się z nami",
 
 
 
