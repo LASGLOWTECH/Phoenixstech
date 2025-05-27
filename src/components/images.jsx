@@ -7,6 +7,7 @@ import Synergy from '../assets/images/synergy2.jpeg';
 import Lady1 from '../assets/images/Lady1.jpeg';
 import Woman1 from '../assets/images/woman1.jpg';
 import Woman2 from '../assets/images/woman2.jpg';
+import Woman3 from '../assets/images/woman3.jpg';
 import Homehero from '../assets/images/Homehero.png'
 import Whoweare from '../assets/images/Whoweare.png'
 import Plines from '../assets/images/plines.png'
@@ -103,6 +104,7 @@ export {
   CareerHero,
   Woman1,
   Woman2,
+  Woman3,
 
   // Continue exporting all images
   Wrongpage

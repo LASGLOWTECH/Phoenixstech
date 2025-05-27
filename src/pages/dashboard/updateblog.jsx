@@ -94,7 +94,13 @@ const Update = () => {
               type="file"
               id="file"
               className="hidden"
-              onChange={(e) => setFile(e.target.files[0])}
+              onChange={(e) => {
+                const selectedFile = e.target.files[0];
+                setFile(selectedFile);
+                if (selectedFile) {
+                  setExistingImage(URL.createObjectURL(selectedFile));
+                }
+              }}
             />
             <label
               htmlFor="file"
@@ -104,10 +110,10 @@ const Update = () => {
               <p className="ml-3 hidden md:block">Upload Cover</p>
             </label>
 
-            {existingImage && !file && (
+            {existingImage && (
               <img
                 src={existingImage}
-                alt="Current Post"
+                alt="Post Cover"
                 className="mt-2 w-full rounded-md object-cover"
               />
             )}
