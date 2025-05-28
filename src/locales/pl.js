@@ -224,6 +224,7 @@ const pl= {
   "Grow Your Career with Phoenixs Tech": "Rozwijaj swoją karierę z Phoenixs Tech",
   "Join a team that values innovation, collaboration, and personal growth": "Dołącz do zespołu, który ceni innowacyjność, współpracę i rozwój osobisty",
   "Careers,innovation, collaboration": "Kariera, innowacja, współpraca",
+  
   "Embark on a Rewarding": "Rozpocznij satysfakcjonującą",
   "Career": "karierę",
   "with Us and Make a Difference": "z nami i zmieniaj świat",
@@ -232,16 +233,18 @@ const pl= {
   "Career Hero": "Bohater kariery",
 
 
+  
   "Grow Your Career with Phoenixs Tech": "Rozwijaj swoją karierę z Phoenixs Tech",
-  "At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you're looking to enhance your skills, take on new challenges, or make a meaningful impact, you'll find a place to thrive with us.": "W Phoenixs Tech wierzymy w rozwijanie talentów i oferujemy nieograniczone możliwości rozwoju. Niezależnie od tego, czy chcesz poszerzać swoje umiejętności, podejmować nowe wyzwania, czy wywierać realny wpływ — znajdziesz u nas miejsce, w którym możesz się rozwijać.",
+  "At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you're looking to enhance your skills, take on new challenges, or make a meaningful impact, you will find a place to thrive with us.": "W Phoenixs Tech wierzymy w rozwijanie talentów i zapewnianie nieograniczonych możliwości rozwoju. Niezależnie od tego, czy chcesz doskonalić swoje umiejętności, podejmować nowe wyzwania, czy wywierać znaczący wpływ – znajdziesz u nas miejsce, w którym możesz się rozwijać.",
   "Career Development": "Rozwój kariery",
-  "Investing in your growth through training and mentorship.": "Inwestujemy w Twój rozwój poprzez szkolenia i mentoring.",
+  "Investing in your growth through training and mentorship.": "Inwestowanie w Twój rozwój poprzez szkolenia i mentoring.",
   "Collaborative Environment": "Środowisko współpracy",
-  "Work with passionate, innovative professionals.": "Pracuj z pasjonatami i innowacyjnymi specjalistami.",
+  "Work with passionate, innovative professionals.": "Pracuj z pasjonującymi się i innowacyjnymi profesjonalistami.",
   "Innovative Projects": "Innowacyjne projekty",
-  "Be part of challenging, boundary-pushing projects.": "Bierz udział w wymagających i przełomowych projektach.",
+  "Be part of challenging, boundary-pushing projects.": "Bądź częścią wymagających, przełamujących granice projektów.",
   "Work-Life Balance": "Równowaga między pracą a życiem prywatnym",
-  "Enjoy flexible schedules and remote work options.": "Korzystaj z elastycznych godzin pracy i możliwości pracy zdalnej."
+  "Enjoy flexible schedules and remote work options.": "Ciesz się elastycznym grafikiem i możliwością pracy zdalnej."
+
 
 // career contact
   ,

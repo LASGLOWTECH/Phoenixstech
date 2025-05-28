@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBolt, FaUsers, FaChartLine, FaBriefcase } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
 
+import { useTranslation } from 'react-i18next';
 const iconVariants = {
     initial: { y: 0 },
     animate: {
@@ -22,7 +22,7 @@ const CareerGrowth = () => {
                         {t("Grow Your Career with Phoenixs Tech")}
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        {t("At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you&apos;re looking to enhance your skills, take on new challenges, or")} {t("make a meaningful impact, you&apos;ll find a place to thrive with us.")}
+                       {t("At Phoenixs Tech, we believe in nurturing talent and providing endless opportunities for growth. Whether you're looking to enhance your skills, take on new challenges, or make a meaningful impact, you will find a place to thrive with us.")}
                     </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-8">
