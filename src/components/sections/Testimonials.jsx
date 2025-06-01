@@ -1,6 +1,6 @@
-// components/Testimonials.jsx
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const testimonials = [
   {
@@ -38,20 +38,27 @@ const TestimonialCard = ({ name, position, message }) => (
 );
 
 const Testimonial = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-neutral-900 mb-10">
-          What Our Clients Say
+          {t("What Our Clients Say")}
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((item, index) => (
-            <TestimonialCard key={index} {...item} />
+          {testimonials.map(({ name, position, message }, index) => (
+            <TestimonialCard
+              key={index}
+              name={name}
+              position={position}
+              message={t(message)}
+            />
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default Testimonial;

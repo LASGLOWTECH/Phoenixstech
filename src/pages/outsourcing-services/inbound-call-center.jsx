@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import HeroSection from '../../components/sections/herosectionm'
 import { Heroimg1 } from '../../components/images'
 // reusable components
@@ -12,141 +13,157 @@ import SEO from '../../utils/seo'
 import { PiPhoneCallFill } from "react-icons/pi";
 import { FaRankingStar } from "react-icons/fa6";
 import { FaTasks } from "react-icons/fa";
-
 import { FaCalendar } from "react-icons/fa";
 
-
-
 function InboundCallCenter() {
+  const { t } = useTranslation()
+
   const supportServices = [
     {
       icon: <PiPhoneCallFill className="text-Primarycolor text-3xl" />,
-      title: "Inbound Call Handling",
-      description:
-        "We manage incoming calls with professionalism and speed, ensuring every customer feels heard and supported.",
-      features: ["24/7 Availability", "First-Call Resolution", "Professional Support"],
+      title: t("Inbound Call Handling"),
+      description: t(
+        "We manage incoming calls with professionalism and speed, ensuring every customer feels heard and supported."
+      ),
+      features: [
+        t("24/7 Availability"),
+        t("First-Call Resolution"),
+        t("Professional Support"),
+      ],
     },
     {
-      icon: <FaRankingStar className= "text-Primarycolor text-3xl" />,
-      title: "Outbound Campaigns",
-      description:
-        "Reach your customers proactively with outbound calls designed to generate leads, collect feedback, or promote services.",
-      features: ["Targeted Outreach", "Scripted Engagement", "Campaign Reporting"],
+      icon: <FaRankingStar className="text-Primarycolor text-3xl" />,
+      title: t("Outbound Campaigns"),
+      description: t(
+        "Reach your customers proactively with outbound calls designed to generate leads, collect feedback, or promote services."
+      ),
+      features: [
+        t("Targeted Outreach"),
+        t("Scripted Engagement"),
+        t("Campaign Reporting"),
+      ],
     },
     {
-      icon: <FaCalendar  className="text-Primarycolor text-3xl" />, 
-      title: "Appointment Scheduling",
-      description:
-        "We assist in booking, confirming, and managing appointments to keep your operations smooth and organized.",
-      features: ["Calendar Integration", "Automated Reminders", "Real-Time Updates"],
+      icon: <FaCalendar className="text-Primarycolor text-3xl" />,
+      title: t("Appointment Scheduling"),
+      description: t(
+        "We assist in booking, confirming, and managing appointments to keep your operations smooth and organized."
+      ),
+      features: [
+        t("Calendar Integration"),
+        t("Automated Reminders"),
+        t("Real-Time Updates"),
+      ],
     },
     {
-      icon: <FaTasks  className="text-Primarycolor text-3xl" />,
-      title: "Customer Surveys & Follow-Ups",
-      description:
-        "Gather feedback and maintain engagement through structured surveys and personalized follow-up calls.",
-      features: ["Insightful Analytics", "High Response Rates", "Customer Retention Boost"],
+      icon: <FaTasks className="text-Primarycolor text-3xl" />,
+      title: t("Customer Surveys & Follow-Ups"),
+      description: t(
+        "Gather feedback and maintain engagement through structured surveys and personalized follow-up calls."
+      ),
+      features: [
+        t("Insightful Analytics"),
+        t("High Response Rates"),
+        t("Customer Retention Boost"),
+      ],
     },
-  ];
-  
+  ]
+
   const benefits = [
     {
-      title: "Higher Engagement",
-      description: "Achieved a 25% increase in customer response rates through personalized inbound call handling.",
+      title: t("Higher Engagement"),
+      description: t(
+        "Achieved a 25% increase in customer response rates through personalized inbound call handling."
+      ),
       color: "bg-[#F3F3FF]",
     },
     {
-      title: "Improved Conversion",
-      description: "Generated a 20% boost in lead-to-sale conversions via strategic outbound campaigns.",
+      title: t("Improved Conversion"),
+      description: t(
+        "Generated a 20% boost in lead-to-sale conversions via strategic outbound campaigns."
+      ),
       color: "bg-[#EFF6FF]",
     },
     {
-      title: "Faster Resolutions",
-      description: "Reduced customer wait time by 35%, leading to quicker problem-solving and higher satisfaction.",
+      title: t("Faster Resolutions"),
+      description: t(
+        "Reduced customer wait time by 35%, leading to quicker problem-solving and higher satisfaction."
+      ),
       color: "bg-[#F0FDF4]",
-
     },
     {
-      title: "Better Retention",
-      description: "Contributed to a 15% improvement in customer loyalty through consistent follow-ups.",
+      title: t("Better Retention"),
+      description: t(
+        "Contributed to a 15% improvement in customer loyalty through consistent follow-ups."
+      ),
       color: "bg-[#FFFBEB]",
     },
     {
-      title: "Increased Efficiency",
-      description: "Streamlined appointment scheduling processes, saving clients an average of 12 hours per week.",
-      color: "bg-[#FFF1F2",
+      title: t("Increased Efficiency"),
+      description: t(
+        "Streamlined appointment scheduling processes, saving clients an average of 12 hours per week."
+      ),
+      color: "bg-[#FFF1F2]",
     },
     {
-      title: "Data-Driven Insights",
-      description: "Enabled smarter decisions with call data that improved sales strategies by 18%.",
+      title: t("Data-Driven Insights"),
+      description: t(
+        "Enabled smarter decisions with call data that improved sales strategies by 18%."
+      ),
       color: "bg-[#F0FDFA]",
     },
-  ];
-  
-
-
-  // title, highlightedWords, subtitle, ctaText, ctaLink, image
+  ]
 
   return (
-
     <div className="bg-gray-50">
-      
-                    <SEO
-                           title="Professional Call Center Solutions That Connect and Convert"
-                            description="Our comprehensive call center solutions are built to streamline communication,
-          improve customer experience, and deliver measurable business impact."
-                            keywords="Careers,innovation, collaboration,"
-                            url="https://www.pheonixstech.com/outsourcing-services/inbound-call-center"/>
-
-<SectionWrapper>
-
-      <HeroSection
-        title="Professional Call Center Solutions That Connect and Convert"
-        highlightedWords="Call Center Solutions"
-        subtitle="Delivering seamless inbound and outbound call experiences to support your customers, boost engagement, and drive results."
-        ctaText="Get A Free Consultation"
-        ctaLink={"/contact"}
-        image={Heroimg1}
+      <SEO
+        title={t("Professional Call Center Solutions That Connect and Convert")}
+        description={t(
+          "Our comprehensive call center solutions are built to streamline communication, improve customer experience, and deliver measurable business impact."
+        )}
+        keywords={t("Careers,innovation, collaboration,")}
+        url="https://www.pheonixstech.com/outsourcing-services/inbound-call-center"
       />
-</SectionWrapper>
-<SectionWrapper>
 
-<ServiceFeatures
-        services={supportServices}
-        sectionTitle="What You Get with Our Call Center Service"
-        sectionSubtitle=" Our comprehensive call center solutions are built to streamline communication,
-          improve customer experience, and deliver measurable business impact."
-      />
-</SectionWrapper>
+      <SectionWrapper>
+        <HeroSection
+          title={t("Professional Call Center Solutions That Connect and Convert")}
+          highlightedWords={t("Call Center Solutions")}
+          subtitle={t(
+            "Delivering seamless inbound and outbound call experiences to support your customers, boost engagement, and drive results."
+          )}
+          ctaText={t("Get A Free Consultation")}
+          ctaLink={"/contact"}
+          image={Heroimg1}
+        />
+      </SectionWrapper>
 
-<SectionWrapper
+      <SectionWrapper>
+        <ServiceFeatures
+          services={supportServices}
+          sectionTitle={t("What You Get with Our Call Center Service")}
+          sectionSubtitle={t(
+            "Our comprehensive call center solutions are built to streamline communication, improve customer experience, and deliver measurable business impact."
+          )}
+        />
+      </SectionWrapper>
 
->
+      <SectionWrapper>
+        <BenefitsGrid
+          benefits={benefits}
+          sectionTitle={t("How Our Service Benefits You")}
+          highlightedWords={t("Benefits")}
+          sectionSubtitle={t(
+            "Our comprehensive call center solutions are built to streamline communication, improve customer experience, and deliver measurable business impact."
+          )}
+        />
+      </SectionWrapper>
 
-<BenefitsGrid
-benefits={benefits}
-sectionTitle="How Our Service Benefits You"
-highlightedWords="Benefits"
-sectionSubtitle=" Our comprehensive call center solutions are built to streamline communication, improve customer experience, and deliver measurable business impact."
+      <CTASection ctaText={t("Get a Free Consultation")} ctaLink={"/Contact"} />
 
-
-/>
-</SectionWrapper>
-
-<CTASection
-
-ctaText="Get a Free Consultation "
-ctaLink={"/Contact"}
-
-
-/>
-
-
-<Testimonial/>
+      <Testimonial />
     </div>
-
   )
 }
 
 export default InboundCallCenter
-

@@ -173,11 +173,129 @@ const en = {
   "Have any questions?": "Have any questions?",
   "We're here to help! Reach out to us with any inquiries or concerns, and our team will provide the answers you need. Feel free to get in touch—we’d love to assist you!": "We're here to help! Reach out to us with any inquiries or concerns, and our team will provide the answers you need. Feel free to get in touch—we’d love to assist you!",
   "Follow us": "Follow us",
-  "Contact Us": "Contact Us"
+  "Contact Us": "Contact Us",
+
+// benefits
+
+  "How Our Service Benefits You": "How Our Service Benefits You",
+  "Our comprehensive call center solutions are built to streamline communication, improve customer experience, and deliver measurable business impact.": "Our comprehensive call center solutions are built to streamline communication, improve customer experience, and deliver measurable business impact.",
+
+  "Higher Engagement": "Higher Engagement",
+  "Achieved a 25% increase in customer response rates through personalized inbound call handling.": "Achieved a 25% increase in customer response rates through personalized inbound call handling.",
+
+  "Improved Conversion": "Improved Conversion",
+  "Generated a 20% boost in lead-to-sale conversions via strategic outbound campaigns.": "Generated a 20% boost in lead-to-sale conversions via strategic outbound campaigns.",
+
+  "Faster Resolutions": "Faster Resolutions",
+  "Reduced customer wait time by 35%, leading to quicker problem-solving and higher satisfaction.": "Reduced customer wait time by 35%, leading to quicker problem-solving and higher satisfaction.",
+
+  "Better Retention": "Better Retention",
+  "Contributed to a 15% improvement in customer loyalty through consistent follow-ups.": "Contributed to a 15% improvement in customer loyalty through consistent follow-ups.",
+
+  "Increased Efficiency": "Increased Efficiency",
+  "Streamlined appointment scheduling processes, saving clients an average of 12 hours per week.": "Streamlined appointment scheduling processes, saving clients an average of 12 hours per week.",
+
+  "Data-Driven Insights": "Data-Driven Insights",
+  "Enabled smarter decisions with call data that improved sales strategies by 18%.": "Enabled smarter decisions with call data that improved sales strategies by 18%.",
+
+  "Inbound Call Handling": "Inbound Call Handling",
+  "We manage incoming calls with professionalism and speed, ensuring every customer feels heard and supported.": "We manage incoming calls with professionalism and speed, ensuring every customer feels heard and supported.",
+  "24/7 Availability": "24/7 Availability",
+  "First-Call Resolution": "First-Call Resolution",
+  "Professional Support": "Professional Support",
+
+  "Outbound Campaigns": "Outbound Campaigns",
+  "Reach your customers proactively with outbound calls designed to generate leads, collect feedback, or promote services.": "Reach your customers proactively with outbound calls designed to generate leads, collect feedback, or promote services.",
+  "Targeted Outreach": "Targeted Outreach",
+  "Scripted Engagement": "Scripted Engagement",
+  "Campaign Reporting": "Campaign Reporting",
+
+  "Appointment Scheduling": "Appointment Scheduling",
+  "We assist in booking, confirming, and managing appointments to keep your operations smooth and organized.": "We assist in booking, confirming, and managing appointments to keep your operations smooth and organized.",
+  "Calendar Integration": "Calendar Integration",
+  "Automated Reminders": "Automated Reminders",
+  "Real-Time Updates": "Real-Time Updates",
+
+  "Customer Surveys & Follow-Ups": "Customer Surveys & Follow-Ups",
+  "Gather feedback and maintain engagement through structured surveys and personalized follow-up calls.": "Gather feedback and maintain engagement through structured surveys and personalized follow-up calls.",
+  "Insightful Analytics": "Insightful Analytics",
+  "High Response Rates": "High Response Rates",
+  "Customer Retention Boost": "Customer Retention Boost",
+
+  "Professional Call Center Solutions That Connect and Convert": "Professional Call Center Solutions That Connect and Convert",
+  "Call Center Solutions": "Call Center Solutions",
+  "Delivering seamless inbound and outbound call experiences to support your customers, boost engagement, and drive results.": "Delivering seamless inbound and outbound call experiences to support your customers, boost engagement, and drive results.",
+  "Get A Free Consultation": "Get A Free Consultation",
+  "What You Get with Our Call Center Service": "What You Get with Our Call Center Service",
+  "Get a Free Consultation": "Get a Free Consultation",
+
+
+  // technical
+  
+  "24/7 Support Access": "24/7 Support Access",
+  "Round-the-clock availability to assist your team and customers anytime.": "Round-the-clock availability to assist your team and customers anytime.",
+  "Always-on helpdesk coverage": "Always-on helpdesk coverage",
+  "Fast response time": "Fast response time",
+  "Reduced downtime": "Reduced downtime",
+  "Expert Troubleshooting": "Expert Troubleshooting",
+  "Skilled professionals ready to resolve technical issues efficiently.": "Skilled professionals ready to resolve technical issues efficiently.",
+  "Certified IT specialists": "Certified IT specialists",
+  "Quick issue resolution": "Quick issue resolution",
+  "Friendly, knowledgeable support": "Friendly, knowledgeable support",
+  "Multi-Channel Support": "Multi-Channel Support",
+  "Get help via chat, email, phone, or ticketing systems.": "Get help via chat, email, phone, or ticketing systems.",
+  "Seamless communication": "Seamless communication",
+  "Centralized issue tracking": "Centralized issue tracking",
+  "Consistent service quality": "Consistent service quality",
+  "Scalable Solutions": "Scalable Solutions",
+  "Support that grows with your business needs.": "Support that grows with your business needs.",
+  "Flexible staffing options": "Flexible staffing options",
+  "Custom support plans": "Custom support plans",
+  "Adaptable service levels": "Adaptable service levels",
+  "24/7 Availability": "24/7 Availability",
+  "Instant technical assistance, any hour of the day, ensuring uninterrupted business operations and peace of mind.": "Instant technical assistance, any hour of the day, ensuring uninterrupted business operations and peace of mind.",
+  "Cost Efficiency": "Cost Efficiency",
+  "Reduced response times by 40% with real-time tools that quickly resolve technical issues before they escalate.": "Reduced response times by 40% with real-time tools that quickly resolve technical issues before they escalate.",
+  "Faster Resolutions": "Faster Resolutions",
+  "Reduced response times by 40% with real-time support tools.": "Reduced response times by 40% with real-time support tools.",
+  "Scalable Support": "Scalable Support",
+  "Easily scale up or down with flexible tech support tailored to your business growth and seasonal demands.": "Easily scale up or down with flexible tech support tailored to your business growth and seasonal demands.",
+  "Proactive Monitoring": "Proactive Monitoring",
+  "Prevent problems before they impact your business through automated issue detection and early response systems.": "Prevent problems before they impact your business through automated issue detection and early response systems.",
+  "Multi-Channel Help": "Multi-Channel Help",
+  "Get support across chat, email, phone, and ticket systems—ensuring your users are always connected and supported.": "Get support across chat, email, phone, and ticket systems—ensuring your users are always connected and supported.",
+  "Reliable Tech Support, Anytime You Need It": "Reliable Tech Support, Anytime You Need It",
+  "Reliable": "Reliable",
+  "We provide expert technical assistance and responsive IT helpdesk solutions to keep your business running smoothly.": "We provide expert technical assistance and responsive IT helpdesk solutions to keep your business running smoothly.",
+  "Get A Free Consultation": "Get A Free Consultation",
+  "What You Get with Technical Support & IT Helpdesk": "What You Get with Technical Support & IT Helpdesk",
+  "Everything you need to deliver fast, efficient, and reliable tech support that keeps your operations running smoothly.": "Everything you need to deliver fast, efficient, and reliable tech support that keeps your operations running smoothly.",
+  "How Our Service Benefits You": "How Our Service Benefits You",
+  "Benefits": "Benefits",
+  "We simplify IT challenges and boost operational performance with responsive, reliable, and scalable tech solutions.": "We simplify IT challenges and boost operational performance with responsive, reliable, and scalable tech solutions.",
+  "Get a Free Consultation ": "Get a Free Consultation ",
+
+
+  // testiomonials
+  
+  "What Our Clients Say": "What Our Clients Say",
+  "Daniel Mensah": "Daniel Mensah",
+  "Operations Manager, BrightEdge Logistics": "Operations Manager, BrightEdge Logistics",
+  "Phoenixs Tech has completely transformed how we handle customer interactions. Our response time is faster, and our clients are noticeably happier.": "Phoenixs Tech has completely transformed how we handle customer interactions. Our response time is faster, and our clients are noticeably happier.",
+  "Alicia Raymond": "Alicia Raymond",
+  "Customer Experience Lead, NovaRetail": "Customer Experience Lead, NovaRetail",
+  "Their team feels like an extension of ours. We've seen real growth in customer satisfaction and call efficiency since we partnered with them.": "Their team feels like an extension of ours. We've seen real growth in customer satisfaction and call efficiency since we partnered with them.",
+  "Tolu Adebayo": "Tolu Adebayo",
+  "Head of Sales, FinPlus Finance": "Head of Sales, FinPlus Finance",
+  "Professional, reliable, and results-driven. Their outbound campaigns alone helped us increase lead conversions by over 20%.": "Professional, reliable, and results-driven. Their outbound campaigns alone helped us increase lead conversions by over 20%."
 
 
 
 
-};
+}
+
+  
+
+
 
 export default en;

@@ -255,7 +255,222 @@ const fr = {
   "Have any questions?": "Des questions ?",
   "We're here to help! Reach out to us with any inquiries or concerns, and our team will provide the answers you need. Feel free to get in touch—we’d love to assist you!": "Nous sommes là pour vous aider ! Contactez-nous pour toute question ou préoccupation, et notre équipe vous fournira les réponses dont vous avez besoin. N'hésitez pas à nous joindre — nous serions ravis de vous assister !",
   "Follow us": "Suivez-nous",
-  "Contact Us": "Contactez-nous"
+  "Contact Us": "Contactez-nous",
+
+// inbounde call center
+
+  
+  "How Our Service Benefits You": "Comment notre service vous bénéficie",
+  "Our comprehensive call center solutions are built to streamline communication, improve customer experience, and deliver measurable business impact.": "Nos solutions de centre d'appels complètes sont conçues pour rationaliser la communication, améliorer l'expérience client et générer un impact commercial mesurable.",
+  
+  "Higher Engagement": "Engagement accru",
+  "Achieved a 25% increase in customer response rates through personalized inbound call handling.": "Augmentation de 25 % du taux de réponse client grâce à une gestion personnalisée des appels entrants.",
+  
+  "Improved Conversion": "Conversion améliorée",
+  "Generated a 20% boost in lead-to-sale conversions via strategic outbound campaigns.": "Amélioration de 20 % des conversions prospects/ventes grâce à des campagnes sortantes stratégiques.",
+  
+  "Faster Resolutions": "Résolutions plus rapides",
+  "Reduced customer wait time by 35%, leading to quicker problem-solving and higher satisfaction.": "Temps d'attente réduit de 35 %, permettant une résolution plus rapide des problèmes et une plus grande satisfaction.",
+  
+  "Better Retention": "Meilleure rétention",
+  "Contributed to a 15% improvement in customer loyalty through consistent follow-ups.": "Contribué à une amélioration de 15 % de la fidélité client grâce à des suivis réguliers.",
+  
+  "Increased Efficiency": "Efficacité accrue",
+  "Streamlined appointment scheduling processes, saving clients an average of 12 hours per week.": "Optimisation de la planification des rendez-vous, permettant aux clients d'économiser en moyenne 12 heures par semaine.",
+  
+  "Data-Driven Insights": "Informations basées sur les données",
+  "Enabled smarter decisions with call data that improved sales strategies by 18%.": "Permis de prendre des décisions plus intelligentes grâce aux données d'appels, améliorant les stratégies de vente de 18 %.",
+  
+  "Inbound Call Handling": "Gestion des appels entrants",
+  "We manage incoming calls with professionalism and speed, ensuring every customer feels heard and supported.": "Nous gérons les appels entrants avec professionnalisme et rapidité, assurant que chaque client se sente écouté et soutenu.",
+  "24/7 Availability": "Disponibilité 24h/24 et 7j/7",
+  "First-Call Resolution": "Résolution au premier appel",
+  "Professional Support": "Support professionnel",
+  
+  "Outbound Campaigns": "Campagnes sortantes",
+  "Reach your customers proactively with outbound calls designed to generate leads, collect feedback, or promote services.": "Atteignez vos clients de manière proactive avec des appels sortants conçus pour générer des prospects, collecter des avis ou promouvoir des services.",
+  "Targeted Outreach": "Ciblage précis",
+  "Scripted Engagement": "Engagement scripté",
+  "Campaign Reporting": "Rapports de campagne",
+  
+  "Appointment Scheduling": "Prise de rendez-vous",
+  "We assist in booking, confirming, and managing appointments to keep your operations smooth and organized.": "Nous aidons à la réservation, la confirmation et la gestion des rendez-vous pour maintenir vos opérations fluides et organisées.",
+  "Calendar Integration": "Intégration calendrier",
+  "Automated Reminders": "Rappels automatisés",
+  "Real-Time Updates": "Mises à jour en temps réel",
+  
+  "Customer Surveys & Follow-Ups": "Enquêtes clients et suivi",
+  "Gather feedback and maintain engagement through structured surveys and personalized follow-up calls.": "Recueillez des avis et maintenez l'engagement grâce à des enquêtes structurées et des appels de suivi personnalisés.",
+  "Insightful Analytics": "Analyses pertinentes",
+  "High Response Rates": "Taux de réponse élevé",
+  "Customer Retention Boost": "Amélioration de la fidélisation client",
+  
+  "Professional Call Center Solutions That Connect and Convert": "Solutions professionnelles de centre d'appels qui connectent et convertissent",
+  "Call Center Solutions": "Solutions de centre d'appels",
+  "Delivering seamless inbound and outbound call experiences to support your customers, boost engagement, and drive results.": "Offrir des expériences d'appels entrants et sortants fluides pour soutenir vos clients, augmenter l'engagement et générer des résultats.",
+  "Get A Free Consultation": "Obtenez une consultation gratuite",
+  "What You Get with Our Call Center Service": "Ce que vous obtenez avec notre service de centre d'appels",
+  "Get a Free Consultation": "Obtenez une consultation gratuite",
+
+// live chat
+
+  "Real-Time Support, Real Customer Satisfaction": "Support en temps réel, vraie satisfaction client",
+  "Support": "Support",
+  "Deliver instant, personalized responses through chat and email—improving customer experience, retention, and brand trust.": "Offrez des réponses instantanées et personnalisées via chat et e-mail—améliorant l'expérience client, la fidélisation et la confiance en la marque.",
+  "Get A Free Consultation": "Obtenez une consultation gratuite",
+  "What You Get with Our Chat & Email Support": "Ce que vous obtenez avec notre support chat et e-mail",
+  "From real-time conversations to follow-up emails, we offer professional support that keeps your customers connected and cared for.": "Des conversations en temps réel aux e-mails de suivi, nous offrons un support professionnel qui maintient vos clients connectés et pris en charge.",
+  "How Our Service Benefits You": "Comment notre service vous bénéficie",
+  "Benefits": "Avantages",
+  "We don’t just answer questions—we build trust, increase customer satisfaction, and drive long-term loyalty through every chat and email.": "Nous ne répondons pas seulement aux questions — nous construisons la confiance, augmentons la satisfaction client et fidélisons sur le long terme à chaque chat et e-mail.",
+
+  "Live Chat Assistance": "Assistance par chat en direct",
+  "Offer immediate help through live chat on your website or app, available round-the-clock.": "Offrez une aide immédiate via le chat en direct sur votre site web ou application, disponible 24h/24.",
+  "24/7 Availability": "Disponibilité 24h/24 et 7j/7",
+  "Scripted or Free-Flow": "Scripté ou libre",
+  "Multilingual Support": "Support multilingue",
+
+  "Email Response Handling": "Gestion des réponses e-mail",
+  "Manage high volumes of customer emails with accuracy, empathy, and speed.": "Gérez un grand volume d'e-mails clients avec précision, empathie et rapidité.",
+  "Organized Inbox": "Boîte de réception organisée",
+  "Timely Replies": "Réponses en temps opportun",
+  "Branded Tone": "Ton de marque",
+
+  "Technical Troubleshooting": "Dépannage technique",
+  "Provide chat/email-based first-level support for technical issues and inquiries.": "Fournissez un support de premier niveau par chat/e-mail pour les problèmes techniques et les demandes.",
+  "Fast Diagnostics": "Diagnostics rapides",
+  "Escalation Protocol": "Protocole d'escalade",
+  "Knowledge Based Access": "Accès à la base de connaissances",
+
+  "Order & Account Queries": "Demandes liées aux commandes et comptes",
+  "Handle questions related to orders, shipping, billing, and account access with precision.": "Traitez les questions relatives aux commandes, expéditions, facturations et accès aux comptes avec précision.",
+  "Secure Response": "Réponse sécurisée",
+  "Real Time Status Update": "Mise à jour du statut en temps réel",
+  "Transactional Accuracy": "Précision transactionnelle",
+
+  "Higher Satisfaction": "Satisfaction accrue",
+  "Boosted CSAT scores by 25% through consistent, empathetic email handling.": "Augmentation de 25 % des scores CSAT grâce à une gestion empathique et constante des e-mails.",
+  "Lower Cart Abandonment": "Réduction de l'abandon de panier",
+  "Live chat support decreased cart abandonment by 18% during checkout.": "Le support chat en direct a réduit l'abandon de panier de 18 % lors du passage en caisse.",
+  "Faster Resolutions": "Résolutions plus rapides",
+  "Reduced response times by 40% with real-time chat engagement.": "Réduction des temps de réponse de 40 % grâce à l'engagement en chat en temps réel.",
+  "Increased Contact Resolution": "Augmentation de la résolution au premier contact",
+  "Achieved a 30% improvement in resolving issues during the first interaction.": "Amélioration de 30 % de la résolution des problèmes dès la première interaction.",
+  "Streamlined Support Workflow": "Optimisation du flux de support",
+  "Saved 10+ weekly hours using centralized email ticket management.": "Gain de plus de 10 heures par semaine grâce à la gestion centralisée des tickets e-mails.",
+  "Better Customer Retention": "Meilleure fidélisation client",
+  "Enhanced loyalty by 20% with proactive, friendly post-purchase emails.": "Fidélité renforcée de 20 % grâce à des e-mails proactifs et amicaux après achat."
+// technical
+,
+
+  "24/7 Support Access": "Accès au support 24/7",
+  "Round-the-clock availability to assist your team and customers anytime.": "Disponibilité 24h/24 pour assister votre équipe et vos clients à tout moment.",
+  "Always-on helpdesk coverage": "Couverture continue du service d'assistance",
+  "Fast response time": "Temps de réponse rapide",
+  "Reduced downtime": "Réduction des temps d'arrêt",
+  "Expert Troubleshooting": "Dépannage expert",
+  "Skilled professionals ready to resolve technical issues efficiently.": "Professionnels qualifiés prêts à résoudre efficacement les problèmes techniques.",
+  "Certified IT specialists": "Spécialistes IT certifiés",
+  "Quick issue resolution": "Résolution rapide des problèmes",
+  "Friendly, knowledgeable support": "Support amical et compétent",
+  "Multi-Channel Support": "Support multi-canaux",
+  "Get help via chat, email, phone, or ticketing systems.": "Obtenez de l'aide via chat, email, téléphone ou système de tickets.",
+  "Seamless communication": "Communication fluide",
+  "Centralized issue tracking": "Suivi centralisé des problèmes",
+  "Consistent service quality": "Qualité de service constante",
+  "Scalable Solutions": "Solutions évolutives",
+  "Support that grows with your business needs.": "Support qui évolue avec les besoins de votre entreprise.",
+  "Flexible staffing options": "Options de personnel flexibles",
+  "Custom support plans": "Plans de support personnalisés",
+  "Adaptable service levels": "Niveaux de service adaptables",
+  "24/7 Availability": "Disponibilité 24/7",
+  "Instant technical assistance, any hour of the day, ensuring uninterrupted business operations and peace of mind.": "Assistance technique instantanée, à toute heure, garantissant des opérations commerciales ininterrompues et la tranquillité d'esprit.",
+  "Cost Efficiency": "Efficacité des coûts",
+  "Reduced response times by 40% with real-time tools that quickly resolve technical issues before they escalate.": "Réduction des temps de réponse de 40% grâce à des outils en temps réel qui résolvent rapidement les problèmes techniques avant qu'ils ne s'aggravent.",
+  "Faster Resolutions": "Résolutions plus rapides",
+  "Reduced response times by 40% with real-time support tools.": "Réduction des temps de réponse de 40% grâce aux outils de support en temps réel.",
+  "Scalable Support": "Support évolutif",
+  "Easily scale up or down with flexible tech support tailored to your business growth and seasonal demands.": "Augmentez ou réduisez facilement avec un support technique flexible adapté à la croissance de votre entreprise et aux demandes saisonnières.",
+  "Proactive Monitoring": "Surveillance proactive",
+  "Prevent problems before they impact your business through automated issue detection and early response systems.": "Prévenez les problèmes avant qu'ils n'affectent votre entreprise grâce à la détection automatisée des problèmes et aux systèmes de réponse précoce.",
+  "Multi-Channel Help": "Aide multi-canaux",
+  "Get support across chat, email, phone, and ticket systems—ensuring your users are always connected and supported.": "Obtenez un support via chat, email, téléphone et systèmes de tickets, garantissant que vos utilisateurs sont toujours connectés et soutenus.",
+  "Reliable Tech Support, Anytime You Need It": "Support technique fiable, quand vous en avez besoin",
+  "Reliable": "Fiable",
+  "We provide expert technical assistance and responsive IT helpdesk solutions to keep your business running smoothly.": "Nous fournissons une assistance technique experte et des solutions de helpdesk IT réactives pour assurer le bon fonctionnement de votre entreprise.",
+  "Get A Free Consultation": "Obtenez une consultation gratuite",
+  "What You Get with Technical Support & IT Helpdesk": "Ce que vous obtenez avec le support technique et le helpdesk IT",
+  "Everything you need to deliver fast, efficient, and reliable tech support that keeps your operations running smoothly.": "Tout ce dont vous avez besoin pour offrir un support technique rapide, efficace et fiable qui maintient vos opérations sans accroc.",
+  "How Our Service Benefits You": "Comment notre service vous profite",
+  "Benefits": "Avantages",
+  "We simplify IT challenges and boost operational performance with responsive, reliable, and scalable tech solutions.": "Nous simplifions les défis IT et améliorons la performance opérationnelle avec des solutions techniques réactives, fiables et évolutives.",
+  "Get a Free Consultation ": "Obtenez une consultation gratuite "
+,
+// multilingual
+
+
+  "Native-Language Agents": "Agents natifs",
+  "Support delivered by fluent speakers for natural, accurate communication.": "Support assuré par des locuteurs natifs pour une communication naturelle et précise.",
+  "Clear, local-language responses": "Réponses claires dans la langue locale",
+  "Cultural understanding": "Compréhension culturelle",
+  "Consistent brand voice": "Voix de marque cohérente",
+  "Global Customer Reach": "Portée mondiale des clients",
+  "Expand your support to customers across regions and time zones.": "Étendez votre support aux clients à travers les régions et les fuseaux horaires.",
+  "Multi-regional coverage": "Couverture multi-régionale",
+  "Seamless onboarding": "Intégration fluide",
+  "Scalable support options": "Options de support évolutives",
+  "Omnichannel Communication": "Communication omnicanal",
+  "Multilingual service across chat, email, and voice channels.": "Service multilingue via chat, e-mail et canaux vocaux.",
+  "Language support across platforms": "Support linguistique sur toutes les plateformes",
+  "Real-time interpretation": "Interprétation en temps réel",
+  "Unified service experience": "Expérience de service unifiée",
+  "Quality & Consistency": "Qualité et cohérence",
+  "Maintain service standards in every language and region.": "Maintenir les standards de service dans chaque langue et région.",
+  "Trained bilingual teams": "Équipes bilingues formées",
+  "Consistent CX metrics": "Indicateurs CX cohérents",
+  "Continuous performance review": "Revue continue des performances",
+  "Wider Reach": "Portée élargie",
+  "Engage customers in their native language and expand your global presence with confidence and ease.": "Engagez les clients dans leur langue maternelle et développez votre présence mondiale avec confiance et facilité.",
+  "Improved Loyalty": "Fidélité améliorée",
+  "Create more meaningful relationships by offering personalized support that makes customers feel valued and understood.": "Créez des relations plus significatives en offrant un support personnalisé qui valorise et comprend les clients.",
+  "Cultural Fit": "Adaptation culturelle",
+  "Communicate with cultural awareness that resonates, reducing misunderstandings and increasing customer satisfaction.": "Communiquez avec une conscience culturelle qui résonne, réduisant les malentendus et augmentant la satisfaction client.",
+  "Stronger Brand Image": "Image de marque renforcée",
+  "Showcase your brand as global, inclusive, and customer-first by offering high-quality multilingual interactions.": "Présentez votre marque comme globale, inclusive et axée sur le client grâce à des interactions multilingues de haute qualité.",
+  "Flexible Coverage": "Couverture flexible",
+  "Provide multilingual support across various time zones with regional teams and around-the-clock availability.": "Offrez un support multilingue à travers différents fuseaux horaires avec des équipes régionales disponibles 24h/24.",
+  "Customer Confidence": "Confiance des clients",
+  "Deliver accurate, empathetic responses that instill trust and ensure customers always feel heard and supported.": "Fournissez des réponses précises et empathiques qui instaurent la confiance et assurent aux clients qu'ils sont toujours entendus et soutenus.",
+  "Global Support in Every Language": "Support mondial dans toutes les langues",
+  "Language": "Langue",
+  "Deliver seamless customer service across borders with native-level support in multiple languages.": "Offrez un service client fluide au-delà des frontières avec un support natif dans plusieurs langues.",
+  "Get A Free Consultation": "Obtenez une consultation gratuite",
+  "What You Get with Multilingual Support": "Ce que vous obtenez avec le support multilingue",
+  "Deliver exceptional service in any language with culturally aware, native-level support that builds global trust.": "Fournissez un service exceptionnel dans toutes les langues avec un support natif et culturellement conscient qui construit la confiance mondiale.",
+  "How Our Service Benefits You": "Comment nos services vous bénéficient",
+  "Benefits": "Avantages",
+  "Deliver seamless, native-level customer support that builds global trust and improves satisfaction across markets.": "Offrez un support client fluide et natif qui construit la confiance mondiale et améliore la satisfaction sur tous les marchés.",
+  "Get a Free Consultation ": "Obtenez une consultation gratuite ",
+
+
+// testimonials
+
+  
+ 
+  "What Our Clients Say": "Ce que disent nos clients",
+  "Daniel Mensah": "Daniel Mensah",
+  "Operations Manager, BrightEdge Logistics": "Responsable des opérations, BrightEdge Logistics",
+  "Phoenixs Tech has completely transformed how we handle customer interactions. Our response time is faster, and our clients are noticeably happier.": "Phoenixs Tech a complètement transformé notre gestion des interactions client. Notre temps de réponse est plus rapide, et nos clients sont visiblement plus satisfaits.",
+  "Alicia Raymond": "Alicia Raymond",
+  "Customer Experience Lead, NovaRetail": "Responsable de l'expérience client, NovaRetail",
+  "Their team feels like an extension of ours. We've seen real growth in customer satisfaction and call efficiency since we partnered with them.": "Leur équipe ressemble à une extension de la nôtre. Nous avons constaté une réelle amélioration de la satisfaction client et de l'efficacité des appels depuis notre partenariat.",
+  "Tolu Adebayo": "Tolu Adebayo",
+  "Head of Sales, FinPlus Finance": "Responsable des ventes, FinPlus Finance",
+  "Professional, reliable, and results-driven. Their outbound campaigns alone helped us increase lead conversions by over 20%.": "Professionnel, fiable et axé sur les résultats. Leurs campagnes sortantes nous ont aidés à augmenter les conversions de prospects de plus de 20 %."
+
+
+
+
 
 
 

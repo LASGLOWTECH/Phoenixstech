@@ -1,4 +1,4 @@
-
+import { useTranslation } from 'react-i18next'
 
 import React from 'react'
 import HeroSection from '../../components/sections/herosectionm'
@@ -19,128 +19,113 @@ import { BiShoppingBag } from 'react-icons/bi';
 import { PiChatBold } from 'react-icons/pi'
 
 function LiveChatSupport() {
-  const supportServices =
-    [
-      {
-        icon: <PiChatBold className="text-Primarycolor text-3xl" />,
-        title: "Live Chat Assistance",
-        description: "Offer immediate help through live chat on your website or app, available round-the-clock.",
-        features: ["24/7 Availability", "Scripted or Free-Flow", "Multilingual Support"]
-      },
-      {
-        icon: <AiOutlineMail className="text-Primarycolor text-3xl" />,
-        title: "Email Response Handling",
-        description: "Manage high volumes of customer emails with accuracy, empathy, and speed.",
-        features: ["Organized Inbox", "Timely Replies", "Branded Tone"]
-      },
-      {
-        icon: <FiSettings className="text-Primarycolor text-3xl" />,
-        title: "Technical Troubleshooting",
-        description: "Provide chat/email-based first-level support for technical issues and inquiries.",
-        features: ["Fast Diagnostics", "Escalation Protocol", "Knowledge Based Access"]
-      },
-      {
-        icon: <BiShoppingBag className="text-Primarycolor text-3xl" />,
-        title: "Order & Account Queries",
-        description: "Handle questions related to orders, shipping, billing, and account access with precision.",
-        features: ["Secure Response", "Real Time Status Update", "Transactional Accuracy"]
-      }
-    ];
+  const { t } = useTranslation()
 
+  const supportServices = [
+    {
+      icon: <PiChatBold className="text-Primarycolor text-3xl" />,
+      title: t("Live Chat Assistance"),
+      description: t("Offer immediate help through live chat on your website or app, available round-the-clock."),
+      features: [t("24/7 Availability"), t("Scripted or Free-Flow"), t("Multilingual Support")]
+    },
+    {
+      icon: <AiOutlineMail className="text-Primarycolor text-3xl" />,
+      title: t("Email Response Handling"),
+      description: t("Manage high volumes of customer emails with accuracy, empathy, and speed."),
+      features: [t("Organized Inbox"), t("Timely Replies"), t("Branded Tone")]
+    },
+    {
+      icon: <FiSettings className="text-Primarycolor text-3xl" />,
+      title: t("Technical Troubleshooting"),
+      description: t("Provide chat/email-based first-level support for technical issues and inquiries."),
+      features: [t("Fast Diagnostics"), t("Escalation Protocol"), t("Knowledge Based Access")]
+    },
+    {
+      icon: <BiShoppingBag className="text-Primarycolor text-3xl" />,
+      title: t("Order & Account Queries"),
+      description: t("Handle questions related to orders, shipping, billing, and account access with precision."),
+      features: [t("Secure Response"), t("Real Time Status Update"), t("Transactional Accuracy")]
+    }
+  ];
 
   const benefits = [
     {
-      title: "Higher Satisfaction",
-      description: "Boosted CSAT scores by 25% through consistent, empathetic email handling.",
+      title: t("Higher Satisfaction"),
+      description: t("Boosted CSAT scores by 25% through consistent, empathetic email handling."),
       color: "bg-[#F3F3FF]", // Assuming a similar color scheme
     },
     {
-      title: "Lower Cart Abandonment",
-      description: "Live chat support decreased cart abandonment by 18% during checkout.",
+      title: t("Lower Cart Abandonment"),
+      description: t("Live chat support decreased cart abandonment by 18% during checkout."),
       color: "bg-[#EFF6FF]", // Assuming a similar color scheme
     },
     {
-      title: "Faster Resolutions",
-      description: "Reduced response times by 40% with real-time chat engagement.",
+      title: t("Faster Resolutions"),
+      description: t("Reduced response times by 40% with real-time chat engagement."),
       color: "bg-[#F0FDF4]",
     },
     {
-      title: "Increased Contact Resolution",
-      description: "Achieved a 30% improvement in resolving issues during the first interaction.",
+      title: t("Increased Contact Resolution"),
+      description: t("Achieved a 30% improvement in resolving issues during the first interaction."),
       color: "bg-[#FFFBEB]",
     },
     {
-      title: "Streamlined Support Workflow",
-      description: "Saved 10+ weekly hours using centralized email ticket management.",
+      title: t("Streamlined Support Workflow"),
+      description: t("Saved 10+ weekly hours using centralized email ticket management."),
       color: "bg-[#FFF1F2]",
     },
     {
-      title: "Better Customer Retention",
-      description: "Enhanced loyalty by 20% with proactive, friendly post-purchase emails.",
+      title: t("Better Customer Retention"),
+      description: t("Enhanced loyalty by 20% with proactive, friendly post-purchase emails."),
       color: "bg-[#F0FDFA]",
     },
   ];
 
-  // title, highlightedWords, subtitle, ctaText, ctaLink, image
-
   return (
-
     <div className="bg-gray-50">
       <SEO
-        title="Real-Time Support, Real Customer Satisfaction"
-        description="Deliver instant, personalized responses through chat and email—improving customer experience,
-             "
+        title={t("Real-Time Support, Real Customer Satisfaction")}
+        description={t("Deliver instant, personalized responses through chat and email—improving customer experience,")}
         keywords="live-chat, contact, instant message,"
-        url="https://www.pheonixstech.com/outsourcing-services/live-chat-support" />
+        url="https://www.pheonixstech.com/outsourcing-services/live-chat-support"
+      />
 
       <SectionWrapper>
-
         <HeroSection
-          title="Real-Time Support, Real Customer Satisfaction"
-          highlightedWords="Support"
-          subtitle="Deliver instant, personalized responses through chat and email—improving customer experience, retention, and brand trust."
-          ctaText="Get A Free Consultation"
+          title={t("Real-Time Support, Real Customer Satisfaction")}
+          highlightedWords={t("Support")}
+          subtitle={t("Deliver instant, personalized responses through chat and email—improving customer experience, retention, and brand trust.")}
+          ctaText={t("Get A Free Consultation")}
           ctaLink={"/contact"}
           image={Heroimg2}
         />
       </SectionWrapper>
-      <SectionWrapper>
 
+      <SectionWrapper>
         <ServiceFeatures
           services={supportServices}
-          sectionTitle="What You Get with Our Chat & Email Support"
-          sectionSubtitle=" From real-time conversations to follow-up emails, we offer professional support that keeps your customers connected and cared for."
+          sectionTitle={t("What You Get with Our Chat & Email Support")}
+          sectionSubtitle={t("From real-time conversations to follow-up emails, we offer professional support that keeps your customers connected and cared for.")}
         />
       </SectionWrapper>
 
-      <SectionWrapper
-
-      >
-
+      <SectionWrapper>
         <BenefitsGrid
           benefits={benefits}
-          sectionTitle="How Our Service Benefits You"
-          highlightedWords="Benefits"
-          sectionSubtitle="We don’t just answer questions—we build trust, increase customer satisfaction, and drive long-term loyalty through every chat and email."
-
-
+          sectionTitle={t("How Our Service Benefits You")}
+          highlightedWords={t("Benefits")}
+          sectionSubtitle={t("We don’t just answer questions—we build trust, increase customer satisfaction, and drive long-term loyalty through every chat and email.")}
         />
       </SectionWrapper>
 
       <CTASection
-
-        ctaText="Get a Free Consultation "
-        ctaLink={"/Contact"}
-
-
+        ctaText={t("Get a Free Consultation ")}
+        ctaLink={"/Consultation"}
       />
-
 
       <Testimonial />
     </div>
-
   )
 }
 
 export default LiveChatSupport
-
