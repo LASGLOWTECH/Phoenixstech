@@ -74,7 +74,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to={'/blog'} className={navLinkClasses}>{t("Blogs")}</Link>
+          <Link to={'/blogs'} className={navLinkClasses}>{t("Blogs")}</Link>
           <Link to={'/Careers'} className={navLinkClasses}>{t("Careers")}</Link>
         </div>
 
@@ -104,7 +104,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <Link to={'/login'}>
+        <Link to={'/Login'}>
           <FaUserCircle className="px-4" size={60} color="Primarycolor" />
         </Link>
 

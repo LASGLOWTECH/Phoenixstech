@@ -58,7 +58,7 @@ const ContactSection = () => {
        title="Contact Us | PheonixStech"
         description="Learn more about PheonixStech—our people, our purpose, and how innovation drives our world-class tech solutions."
         keywords="Contact us"
-        url="https://www.pheonixstech.com/contact"
+        url="https://www.pheonixstech.com/Contact"
     
       />
 

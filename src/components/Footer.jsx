@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { FaLinkedin, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaFacebookF, FaInstagram} from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import { Plines } from "../components/images";
 import { useTranslation } from 'react-i18next';
 
@@ -61,10 +62,10 @@ export default function Footer() {
             <span className="flex items-center gap-2">
               {t('Follow us')}
             </span>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin className='text-2xl'/></a>
+            <a href="https://www.facebook.com/profile.php?id=61576601565478" target="_blank" rel="noopener noreferrer"><FaFacebookF className='text-2xl'/></a>
+            <a href="https://www.instagram.com/phoenixstech" target="_blank" rel="noopener noreferrer"><FaInstagram className='text-2xl'/></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter className='text-2xl'/></a>
           </div>
           <div className="flex gap-6">
             <Link to="/terms">{t('Terms & Conditions')}</Link>

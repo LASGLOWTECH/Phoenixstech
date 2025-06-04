@@ -50,9 +50,9 @@ const Blogs = () => {
         
         <SEO
                title="Our blogs and latest news"
-                description="Learn more about PheonixStech—our people, our purpose, and how innovation drives our world-class tech solutions."
+                description="Learn more about Pheonixstech our people, our purpose, and how innovation drives our world-class tech solutions."
                 keywords="Our Blogs"
-                url="https://www.pheonixstech.com/blog"
+                url="https://www.pheonixstech.com/blogs"
             
               />
 

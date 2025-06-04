@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import TawkToWidget from './utils/tawkit';
 import { ToastContainer } from 'react-toastify';
@@ -30,22 +30,21 @@ import ScrollTop from "./components/scroll";
 import Register from './pages/Register';
 import Login from './pages/Login';
 import NotFound from './pages/not-found';
-import DashboardHome from './pages/dashboard/DashboardHome'; // You need to create this component
+import DashboardHome from './pages/dashboard/DashboardHome';
 import Create from './pages/dashboard/createblog';
 import Consultation from './pages/consultation';
 import Consult from './pages/dashboard/consultation';
 import Subscriptions from './pages/dashboard/subscriptions';
 import BlogList from './pages/dashboard/bloglist';
 import Update from './pages/dashboard/updateblog';
-// Admin Pages
 import AdminLayout from './pages/dashboard';
 
+import { Routes, Route, useLocation } from 'react-router-dom';
 
-
-// Create a wrapper component to access `useLocation`
+// Layout wrapper to use `useLocation`
 const AppLayout = () => {
   const location = useLocation();
-  const hideLayoutRoutes = ['/login'];
+  const hideLayoutRoutes = ['/Login', ];
 
   const shouldHideLayout = hideLayoutRoutes.includes(location.pathname.toLowerCase());
 
@@ -55,37 +54,32 @@ const AppLayout = () => {
 
   return (
     <>
-
-
       {!shouldHideLayout && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/About" element={<AboutUs />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Careers" element={<Careers />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
 
-
-        {/* admin panel */}
+        {/* Admin Panel */}
         <Route path="/dashboard" element={<AdminLayout />}>
-          <Route index element={<DashboardHome />} /> {/* Default route for /dashboard */}
+          <Route index element={<DashboardHome />} />
           <Route path="updateblog" element={<Update />} />
-              <Route path="createblog" element={<Create />} />
+          <Route path="createblog" element={<Create />} />
           <Route path="consultation" element={<Consult />} />
           <Route path="subscriptions" element={<Subscriptions />} />
           <Route path="bloglist" element={<BlogList />} />
-          {/* <Route path="subscriptions" element={<SubscriptionAdmin />} /> */}
-
         </Route>
 
-
-        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
 
         <Route path="/consultation" element={<Consultation />} />
 
+        {/* Industries */}
         <Route path="/industries/e-commerce" element={<ECommerce />} />
         <Route path="/industries/automotive" element={<Automotive />} />
         <Route path="/industries/healthcare" element={<Healthcare />} />
@@ -94,13 +88,11 @@ const AppLayout = () => {
         <Route path="/industries/technology" element={<Technology />} />
         <Route path="/industries/media" element={<Media />} />
 
+        {/* Services */}
         <Route path="/outsourcing-services/inbound-call-center" element={<InboundCallCenter />} />
         <Route path="/outsourcing-services/live-chat-support" element={<LiveChatSupport />} />
         <Route path="/outsourcing-services/technical-support" element={<TechnicalSupport />} />
         <Route path="/outsourcing-services/multilingual-support" element={<MultilingualSupport />} />
-
-
-
 
         <Route path="*" element={<NotFound />} />
       </Routes>
@@ -113,11 +105,25 @@ const AppLayout = () => {
   );
 };
 
-const App = () => (
-  <Router>
-<SiteLoader /> 
-    <AppLayout />
-  </Router>
-);
+// Main App Component with SiteLoader
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (document.readyState === 'complete') {
+      setLoading(false);
+    } else {
+      const handleLoad = () => setLoading(false);
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
+
+  return (
+    <Router>
+      {loading ? <SiteLoader /> : <AppLayout />}
+    </Router>
+  );
+};
 
 export default App;

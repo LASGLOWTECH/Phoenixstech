@@ -18,7 +18,7 @@ export default function Careers() {
       <SEO
         title={t("Grow Your Career with Phoenixs Tech")}
         description={t("Join a team that values innovation, collaboration, and personal growth")}
-        keywords={t("Careers,innovation, collaboration")}
+        keywords={t("Careers,innovation, collaboration,job opportunities")}
         url="https://www.pheonixstech.com/Careers"
       />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

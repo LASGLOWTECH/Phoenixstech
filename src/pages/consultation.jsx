@@ -110,11 +110,10 @@ const Consultation = () => {
 
       
                     <SEO
-                           title="Consultatation,"
+                           title="Consultation,"
                             description="Get across to us today for any question you might need"
                             keywords="Consultations, Subscription,"
-                            url="https://www.pheonixstech.com/consutation"
-                        
+                            url="https://www.phoenixstech.com/consultation"
                           />
       <div className="py-16 px-4 mx-auto md:px-40">
         <div className="p-3 border-b border-gray-200">

@@ -1,44 +1,33 @@
-
-// Initializing scroll to top button
-// import the button
 import { useEffect, useState } from "react";
-import {  BsFillArrowUpCircleFill } from 'react-icons/bs'
+import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 
 const ScrollTop = () => {
+  const [show, setShow] = useState(false);
 
-   // hide the buttton by default
-   const [show, setShow] = useState(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      setShow(window.scrollY > 500);
+    };
 
-   //  use useEFFECT TO shoe it 
-   useEffect(() => {
-      window.addEventListener("scroll", () => {
-         if (window.scrollY > 500) { setShow(true) }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-         else {setShow(false)}
+  const ScrolltoTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-      })
+  if (!show) return null;
 
-   }, [])
-
-
-   const ScrolltoTop = () => {
-
-
-      window.scrollTo({
-         top: 0,
-         behavior: 'smooth'
-      })
-   }
-   return (
-      <div className="mx-auto container ">
-         {show && (
-            <div className="arrow-up flex justify-end my-6  animate-pulse " >
-               <BsFillArrowUpCircleFill onClick={ScrolltoTop} className=" load-arrow fill-Primarycolor hover:fill-Secondarycolor  text-4xl fw-bold text-darkBlue" />
-            </div>
-
-         )}
-      </div>
-   );
-}
+  return (
+    <button
+      onClick={ScrolltoTop}
+      className="fixed bottom-6 left-6 z-50 animate-pulse"
+      aria-label="Scroll to top"
+    >
+      <BsFillArrowUpCircleFill className="text-4xl text-Primarycolor me-6 hover:text-Secondarycolor" />
+    </button>
+  );
+};
 
 export default ScrollTop;

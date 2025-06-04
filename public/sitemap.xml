@@ -22,7 +22,7 @@
   </url>
 
   <url>
-    <loc>https://phoenixstech.com/blog</loc>
+    <loc>https://phoenixstech.com/blogs</loc>
     <priority>0.7</priority>
   </url>
 
@@ -76,7 +76,7 @@
 
   <!-- Utility -->
   <url>
-    <loc>https://phoenixstech.com/login</loc>
+    <loc>https://phoenixstech.com/Login</loc>
     <priority>0.3</priority>
   </url>
 
