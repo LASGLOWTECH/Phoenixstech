@@ -28,10 +28,10 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-3">{t('Quick Links')}</h3>
             <ul className="space-y-2 ">
               <li><Link to="/" className={textStyle}>{t('Home')}</Link></li>
-              <li><Link to="/about" className={textStyle}>{t('About Us')}</Link></li>
-              <li><Link to="/blog" className={textStyle}>{t('Blog')}</Link></li>
-              <li><Link to="/careers" className={textStyle}>{t('Careers')}</Link></li>
-              <li><Link to="/contact" className={textStyle}>{t('Contact Us')}</Link></li>
+              <li><Link to="/About" className={textStyle}>{t('About Us')}</Link></li>
+              <li><Link to="/blogs" className={textStyle}>{t('Blog')}</Link></li>
+              <li><Link to="/Careers" className={textStyle}>{t('Careers')}</Link></li>
+              <li><Link to="/Contact" className={textStyle}>{t('Contact Us')}</Link></li>
             </ul>
           </div>
           <div>
