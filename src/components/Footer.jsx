@@ -62,10 +62,10 @@ export default function Footer() {
             <span className="flex items-center gap-2">
               {t('Follow us')}
             </span>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin className='text-2xl'/></a>
+            <a href="https://www.linkedin.com/company/phoenixs-tech/" target="_blank" rel="noopener noreferrer"><FaLinkedin className='text-2xl'/></a>
             <a href="https://www.facebook.com/profile.php?id=61576601565478" target="_blank" rel="noopener noreferrer"><FaFacebookF className='text-2xl'/></a>
             <a href="https://www.instagram.com/phoenixstech" target="_blank" rel="noopener noreferrer"><FaInstagram className='text-2xl'/></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter className='text-2xl'/></a>
+            <a href="https://x.com/Phoenixstech0?s=08" target="_blank" rel="noopener noreferrer"><FaXTwitter className='text-2xl'/></a>
           </div>
           <div className="flex gap-6">
             <Link to="/terms">{t('Terms & Conditions')}</Link>
