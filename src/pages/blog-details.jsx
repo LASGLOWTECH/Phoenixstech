@@ -90,7 +90,7 @@ const BlogDetails = () => {
       <div className="md:px-20 px-6 mx-auto rounded-lg overflow-hidden">
         {/* Back Button */}
         <div className="p-3 border-b border-gray-200">
-          <Link to="/blog" className="flex items-center text-gray-600 hover:text-gray-800 text-lg font-semibold">
+          <Link onClick={() => navigate(-1)} className="flex items-center text-gray-600 hover:text-gray-800 text-lg font-semibold">
             <FaArrowLeftLong className="mr-2" size={20} />
             Back
           </Link>
